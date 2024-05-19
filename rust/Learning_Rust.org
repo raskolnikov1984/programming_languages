@@ -1,0 +1,39 @@
+#+title: Learning Rust
+#+author: Alejandro Ayala
+#+STARTUP: showeverything
+
+* TOPICS :toc:
+- [[#data-types][Data Types]]
+  - [[#scalar-types][Scalar Types]]
+  - [[#integer-types][Integer Types]]
+  - [[#floating-point-types][Floating-Point Types]]
+  - [[#boolean-type][Boolean Type]]
+  - [[#character-type][Character Type]]
+  - [[#tuple-type][Tuple Type]]
+  - [[#numeric-operations][Numeric Operations]]
+
+* Data Types
+** Scalar Types
+** Integer Types
+** Floating-Point Types
+** Boolean Type
+#+begin_src rust
+fn main(){
+    let t = true;
+    let f: bool = false; //Explicit Type Annotation
+}
+#+end_src
+** Character Type
+#+begin_src rust
+fn main(){
+    let c = 'A';
+    let z: char = 'Z'; // with explicit type annotation
+}
+#+end_src
+** Tuple Type
+#+begin_src rust
+fn main(){
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+}
+#+end_src
+** Numeric Operations
