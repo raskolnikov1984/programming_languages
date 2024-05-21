@@ -117,7 +117,7 @@ Join two elements. Make the idea sound more fluent.
 
 Comma before the conjunction.
 * Paragraph
-[[../img/Basic_Paragraph_Structure.webp]]
+[[./img/Basic_Paragraph_Structure.webp]]
 ** Connectors
 + Addition: Adds one phrase to another, gives extra information.
   #+begin_example
