@@ -13,6 +13,7 @@
 - [[#paragraph][Paragraph]]
   - [[#connectors][Connectors]]
 - [[#text][Text]]
+  - [[#paraller-structure][Paraller Structure]]
   - [[#writing-process][Writing Process]]
 
 * Basic Structure
@@ -116,6 +117,7 @@ Join two elements. Make the idea sound more fluent.
 
 Comma before the conjunction.
 * Paragraph
+[[[[./img/Basic]]_Paragraph_Structure.webp]]
 ** Connectors
 + Addition: Adds one phrase to another, gives extra information.
   #+begin_example
@@ -151,6 +153,14 @@ Comma before the conjunction.
   #+end_example
 
 * Text
+** Paraller Structure
+- Is use when we write something in series.
+  #+begin_example
+  - I like eating pizza, listening to music, and playing soccer.
+  - They read books and listen to music.
+  - They sell pineapples, oranges, and apples in the supermarket.
+  - I finished my project and I ate cake to celebrate.
+  #+end_example
 ** Writing Process
 - What do you want to communicate?
 - Why is it important?
