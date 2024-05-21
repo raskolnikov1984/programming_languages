@@ -1,0 +1,168 @@
+#+title: Basic Writing Course
+#+author: Alejandro Ayala
+#+startup: showeverything
+
+* Objetives :toc:
+- [[#basic-structure][Basic Structure]]
+  - [[#capitalization][Capitalization]]
+  - [[#abbreviation][Abbreviation]]
+  - [[#indentation][Indentation]]
+- [[#sentence][Sentence]]
+  - [[#types-of-sentence][Types of Sentence]]
+  - [[#combining-sentences][Combining Sentences]]
+- [[#paragraph][Paragraph]]
+  - [[#connectors][Connectors]]
+- [[#text][Text]]
+  - [[#writing-process][Writing Process]]
+
+* Basic Structure
+** Capitalization
+- The firts letter of a sentence.
+  #+begin_example
+  My name is Alejandro.
+  #+end_example
+- The pronoun "I"
+  #+begin_example
+  My sister and I wathc TV.
+  #+end_example
+- Names and Title
+  #+begin_example
+  This is Mr.Jones
+  #+end_example
+- Cities and Countries
+  #+begin_example
+  I live in Medellín, Colombia.
+  #+end_example
+- Nationalities and languages.
+  #+begin_example
+  I am Colombian, and I speak Spanish
+  #+end_example
+- Days / Months / Holidays
+  #+begin_example
+  Today is Sunday, May 18th
+  #+end_comment
+
+** Abbreviation
+- Acronym:
+  #+begin_example
+  - PIN (Personal Identification Number)
+  - NASA (National Aeronautics and Space Administration)
+  - LASER (Light Amplification by Stimulated Emission of Radiation)
+  #+end_example
+- Initialism
+  #+begin_example
+  - DIY (Do it Yourself)
+  - USA (United States of America)
+  - DVD (Digital Versatile Disk)
+    #+end_example
+
+** Indentation
+- First-line Indent
+- Block: Guides, Manuals
+
+* Sentence
+** Types of Sentence
+1. Declarative (Statement)
+   #+begin_example
+   - I like chocolate
+   - I don't like chocolate
+   #+end_example
+2. Imperative
+   #+begin_example
+   - Eat.
+   - Don't eat!
+   #+end_example
+3. Interrogative
+   #+begin_example
+   - Don't you like chocolate?
+   - where is your house?
+   #+end_example
+4. Exclamative
+   #+begin_example
+   - What a surprise!
+   - How nice!
+   #+end_example
+** Combining Sentences
+*** Clauses: Simple, Compound
+**Simple:** Independent clause
+**Compound:** Independent clause + Independent clause
+
+- Independent Clause:
+   + Contains a Subject, a Verb and a complete idea
+     #+begin_example
+     - I drink coffee.
+     - Mary and Ana study English.
+     #+end_example
+
+*** Combining Sentences
+#+begin_example
+example: We hace a new student he is from Italy.
+
++ Period: We have a new student. He is from Italy.
++ Semicolon: We have a new student; he is from Italy.
++ Coordinating conjunction: We hace a new student, and he is from Italy.
+#+end_example
+*** Coordinating Conjunction
+Join two elements. Make the idea sound more fluent.
+
+- FANBOYS:
+  + For
+  + And
+  + Nor
+  + But
+  + Or
+  + Yet
+  + So
+
+Comma before the conjunction.
+* Paragraph
+** Connectors
++ Addition: Adds one phrase to another, gives extra information.
+  #+begin_example
+  "and, also, moreover, additionally, too, not only, furthermore"
+  #+end_example
++ Cause and effect: Explains the reason and the consequence of an action.
+  #+begin_example
+  "because, so, since, for, for this reason, therefore, as a result"
+  #+end_example
++ Comparison: Compares ideas.
+  #+begin_example
+  "in the same way, like, likewise, similary, equally, in comparision, despite this"
+  #+end_example
++ Conclusion: Concludes ideas.
+  #+begin_example
+  "to conclude, in conclusion, summarizing, to sum up, overall, finally, evidently"
+  #+end_example
++ Contrast: Links two contrasting ideas.
+  #+begin_example
+  "but, However, unless, on the other, hand, although, otherwise"
+  #+end_example
++ Emphasis: Emphasizes ideas.
+  #+begin_example
+  "especially, actually, above all, in particular, certainly, in fact, notably"
+  #+end_example
++ Ilustration: Exemplifies something.
+  #+begin_example
+  "for example, such as, for instance, in other words, to show that, as an example, in the case of"
+  #+end_example
++ Time and Sequence: Links actions and indicates the order of the events.
+  #+begin_example
+  "first, second, next, finally, after, later, next, then, eventually."
+  #+end_example
+
+* Text
+** Writing Process
+- What do you want to communicate?
+- Why is it important?
+- Who is your audience?
+
+*** Prewriting:
+Explore possible topics, choose one, and collect ideas.
+1. Drafting.
+   Put all your ideas down on paper.
+2. Revising.
+   Read and improve your draft's form and content. Add, remove, change words, and rearrange the sentences.
+3. Editing.
+   Fix all the errors in grammar, spelling, capitalization, and punctuation.
+4. Publishing.
+   Present your writing to an audience.
