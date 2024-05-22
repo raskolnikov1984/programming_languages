@@ -12,9 +12,16 @@
   - [[#combining-sentences][Combining Sentences]]
 - [[#paragraph][Paragraph]]
   - [[#connectors][Connectors]]
+  - [[#adverbs-of-frequency][Adverbs of Frequency]]
 - [[#text][Text]]
   - [[#paraller-structure][Paraller Structure]]
   - [[#writing-process][Writing Process]]
+-  [[#excercise-a-day-in-my-life][Excercise: A day in my life.]]
+-  [[#excercise-informal-email][Excercise: Informal Email.]]
+- [[#excercise-formal-email][Excercise: Formal Email.]]
+- [[#excercise-writing-a-review][Excercise: Writing a review.]]
+- [[#excersice-biography-simple-past-and-present][Excersice: Biography Simple past and present.]]
+- [[#referencies][Referencies]]
 
 * Basic Structure
 ** Capitalization
@@ -117,7 +124,12 @@ Join two elements. Make the idea sound more fluent.
 
 Comma before the conjunction.
 * Paragraph
+
 [[./img/Basic_Paragraph_Structure.webp]]
+1. Topic Sentence: Main idea.
+2. Supporting Sentence: Examples, reasons, descriptions, arguments, causes & effects, details.
+3. Concluding Sentence: Summary, final thoughts, personal opinion, transition.
+
 ** Connectors
 + Addition: Adds one phrase to another, gives extra information.
   #+begin_example
@@ -152,6 +164,29 @@ Comma before the conjunction.
   "first, second, next, finally, after, later, next, then, eventually."
   #+end_example
 
+** Adverbs of Frequency
+#+begin_example
+Always.
+        - Maria always brushes her teeth.
+        - Sammy is always happy.
+
++ Usually.
+        - I usually wake up at 8 am.
+        - My sisters are usually in a bad mood.
+
++ Sometimes.
+        - My best friend and I sometimes go to the movies.
+        - My Little Brother is sometimes sick.
+
++ Hardly Ever.
+        - My neighbor's dog hardly ever barks at me.
+        - I go to the gym every day. I am hardly ever tired.
+
++ Never.
+        - I don't like cheese, So I never eat pizza.
+        - My teacher is never late for class.
+#+end_example
+
 * Text
 ** Paraller Structure
 - Is use when we write something in series.
@@ -176,3 +211,29 @@ Explore possible topics, choose one, and collect ideas.
    Fix all the errors in grammar, spelling, capitalization, and punctuation.
 4. Publishing.
    Present your writing to an audience.
+
+*  Excercise: A day in my life.
+*  Excercise: Informal Email.
+- Beginning (greeting and opening)
+- Middle (giving news and talking about plans)
+- End (closing and name).
+* Excercise: Formal Email.
+- Beginning (greeting and opening)
+- Middle (giving news and talking about plans)
+- End (closing and name).
+* Excercise: Writing a review.
+- personal opinion.
+- Information.
+* Excersice: Biography Simple past and present.
+- Occupation
+- Nationality
+- Birthday
+- Family
+- Specific Information
+- Favorites
+
+* Referencies
+https://learnenglish.britishcouncil.org/skills
+https://www.bbc.co.uk/learningenglish/
+https://www.eslpod.com/
+https://www.ted.com/
