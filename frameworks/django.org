@@ -1,0 +1,71 @@
+#+title: Django
+#+author: Alejandro Ayala
+#+startup: showeverything
+
+* Django: :toc:
+- [[#how-does-django-work-mvt][How Does Django Work?: MVT]]
+- [[#install][Install]]
+- [[#first-project][First Project]]
+  - [[#initilialize-new-project][Initilialize new project]]
+  - [[#run-the-server][Run the server]]
+  - [[#crea-applications][Crea applications]]
+  - [[#steps][Steps]]
+
+* How Does Django Work?: MVT
+- Model
+- View
+- Template
+* Install
+ #+begin_src bash
+pip3 install django
+ #+end_src
+
+* First Project
+** Initilialize new project
+ #+begin_src bash
+django-admin startproject my_tennis_club
+ #+end_src
+** Run the server
+ #+begin_src bash
+python3 manage.py runserver
+ #+end_src
+** Crea applications
+ #+begin_src bash
+python3 manage.py startapp members
+ #+end_src
+** Steps
+1. Views: Django views are Python functions that takes http requests and returns http response, like HTML documents.
+2. Urls.
+3. Templates.
+4. Models.
+   1. Create the migrations of the database.
+      #+begin_src bash
+      python3 manage.py makemigrations members
+      #+end_src
+   2. Execute the migrations.
+      #+begin_src bash
+      python3 manage.py migrate
+      #+end_src
+   3. add records.
+      #+begin_src bash
+      python3 manage.py shell
+      #+end_src
+
+      #+begin_src python
+      from members.models import Member
+
+      # Hit [enter] and write this to look at the empty Member table:
+      Member.objects.all()
+
+      # Create First Record
+      member1 = Member(firstname='Alejandro', lastname='Ayala')
+      member1.save()
+      member2 = Member(firstname='Marcela', lastname='Ayala')
+      member2.save()
+      member3 = Member(firstname='Andrea', lastname='Ayala')
+      member3.save()
+
+      # See if the Member table got a member
+      Member.objects.all().values()
+      #+end_src
+   4. **Note** Remember run migrations
