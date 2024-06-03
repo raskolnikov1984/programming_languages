@@ -1,0 +1,151 @@
+#+title: Python Architecture Patterns
+#+author: Jaimen Buelta
+#+DESCRIPTION: Learn about architecture software
+#+startup: showeverything
+
+* CONTENT :toc:
+- [[#introduction-to-software-architecture][Introduction to Software Architecture]]
+  - [[#defining-the-structue-of-a-system][Defining the structue of a system]]
+  - [[#division-into-smaller-units][Division into smaller units]]
+  - [[#conways-law---effects-on-software-architecture][Conway's Law - Effects on Software Architecture]]
+  - [[#security-aspects-of-software-architecture][Security aspects of software architecture]]
+- [[#part-i-design][Part I: Design]]
+  - [[#api-design-application-programming-interface][API Design (Application Programming Interface)]]
+
+* Introduction to Software Architecture
+** Defining the structue of a system
+A medida que la complejidad del software va creciendo también va aumentando la dificultad para realizar cambios, Es por esto que es más fácil hacer cambios siguiendo la estructura que en contra de la misma estructura. Si bien el objetivo principal es crear un sistema que sea fácil y eficiente para cambiar en el futuro, un diseño arquitectónico inteligente tendrá un equilibrio adecuado de facilidad y dificultad basado en los requisitos. Es por esto que la arquitectura de Software se ocupa de implicaciones a largo plazo.
+
+- Para definir una arquitectura de Software se debe tomar encuenta las implicaciones dadas por:
+  1. **Bussiness vission**, conducida básicamente por los clientes y el crecimiento comercial.
+  2. **Technical requirements**, cumpla con las necesidades técnicas como lo pueden ser la cantidad de usuarios, la rapidez y fluides del sistema etc…
+  3. **Security and realiability concerns,** Seguridad he integridad de los datos almacenados.
+  4. **Division of tasks,** División de Tareas para el equipo de trabajo.
+  5. **Use specific technologies, vinculación con otros sistemas**
+
+Uno de los principales desafíos para un arquitecto de software es trabajar con sistemas existentes. que deben adaptarse, haciendo enfoques incrementales hacia un mejor sistema, todos sin interrumpir la operación diaria normal que mantiene el negocio en funcionamiento.
+** Division into smaller units
+Dividir en pequeñas partes cumpliento con la claridad en el funcionamiento de cada una de ellas y como interactúa con ellas.
+
+[[./img/LAMP_Architecture.png]]
+**Example for an architecture Linux, Apache, MySQL, PHP**
+
+#+begin_quote
+**single responsability principle** cada elemento tiene una y solo una única responsabilidad.
+#+end_quote
+
+#+begin_quote
+The most critical and valuable element of a system is almost always the stored data.
+#+end_quote
+** Conway's Law - Effects on Software Architecture
+Esta ley se cuestiona como la división general de una organización afecta la estructura del software deseado.
+
+- Ejemplos:
+  - crear multiples sistemas para cada departamento de la organización.
+  - Departamento de Compras y Ventas.
+
+Lo principal para la aplicación exitosa de cualquier arquitectura de software es que la estructura del equipo debe seguir muy de cerca la arquitectura diseñada.
+
+#+begin_quote
+Conway's Law should not be considered an impediment to overcome but a reflection of the fact that organizational structure has an impact on the structure of the software.
+Software architecture is tightly related to how different teams are coordinated and responsibilities are divided. It has an important human communication component.
+#+end_quote
+
+** Security aspects of software architecture
+La seguridad tiene una relación muy estrecha con la arquitectura de un sistema. Como vimos Antes, la arquitectura define qué aspectos son fáciles y difíciles de cambiar
+y puede hacer que algunas cosas peligrosas sean imposibles de hacer, como saber la contraseña de un usuario, como describimos en el ejemplo anterior. Otras opciones incluyen
+no almacenar datos del usuario para mantener la privacidad o reducir los datos expuestos en las API internas, por ejemplo. La seguridad del software es un problema muy difícil y,
+a menudo, es un arma de doble filo. y tratar de hacer un sistema más seguro puede tener el efecto secundario de hacer operaciones largas e incómoda
+
+
+* Part I: Design
+Design is the first stage of any successful system, and encompasses everything that you work on before you begin implementation.
+
+1. **The Interface**: Define la funcionalidad desde el punto del vista de un usuario.
+2. **Data Storage**: Almacenamiento de los datos.
+   #+begin_comment
+   Cambiar la forma en que se almacenan los datos en el sistema es difícil una vez que el sistema está en funcionamiento. operación. No es imposible pero requerirá mucho trabajo.
+   #+end_comment
+
+** API Design (Application Programming Interface)
+Describing how to create useful, yet flexible, interface.
+
+*** Alternatives to API:
+
+- RPC: Remote Procedure Call
+- SOAP: Single Object Access Protocol
+
+*** Abtractions:
+
+Una API (Interfaz de Programación de Aplicaciones), permite a un usuario externo interactuar con una pieza de software sin entender su total funcionamiento, brindandole un menú de acciones que pueden ser realizadas. Estas acciones son netamente funcionales; Su salida solo esta relacionada con la entrada.
+
+*** Leaking Abstraction
+
+Cuando una abstracción filtra detalles de la implementación y no presenta una
+imagen perfectamente opaca, se llama abstracción con fugas.
+
+Las fugas de abstracción ocurren cuando los detalles de implementación de un nivel inferior se "filtran" en un nivel superior, rompiendo la abstracción y obligando al usuario a considerar detalles que la abstracción debería haber escondido. Esto puede complicar el uso de la abstracción y puede hacer que el código sea más difícil de entender y mantener.
+
+#+begin_quote
+Leaky abstractions are, to a certain degree, unavoidable. They are the result of not
+living in a perfect world. Software is fallible. Understanding and preparing for that is
+critical.
+#+end_quote
+
+To present clear errors and hints externally. A good design will always include cases for things going wrong and try to present them clearly with
+proper error codes or error handling.
+
+• To deal with errors that could come from dependent services internally.
+Dependent services can fail or have other kinds of problems. The API
+should abstract this to a certain degree, recovering from the problem if
+possible, failing gracefully if not, and returning a proper result if recovery
+is impossible.
+
+The best design is the one that not only designs things when they work as expected,
+but also prepares for unexpected problems and is sure that they can be analyzed
+and corrected
+
+> Object-oriented programming (OOP) uses these abstractions, as everything is an object that can receive messages to perform some actions. Functional programming, on the other hand, doesn't fit neatly into this structure, as "actions" can work like resources.
+>
+
+### RESTful interfaces (Representational State Transfer)
+
+Para que un sistema sea considerado RESTful debe seguir ciertas reglas:
+
+1. Client-Server Architecture
+2. Stateless: Toda la información relacionada con una solicitud en particular debe estar contenida en la propia solicitud, haciéndola independiente del servidor específico que atiende la solicitud.
+3. Capacidad de caché. La capacidad de caché de las respuestas debe ser clara, ya Capacidad de caché. La capacidad de caché de las respuestas debe ser clara,Capacidad de caché. La capacidad de caché de las respuestas debe ser clara, ya sea para decir se pueden almacenar en caché o no. ya sea para decir se pueden almacenar en caché o no.sea para decir se pueden almacenar en caché o no.
+4. Layered system. The client cannot tell if they are connected to a final server or if there's an intermediate server.
+5. Uniform interface, with four prerequisites:
+   + Resource identification in requests, meaning a resource is
+   unequivocally represented, and its representation is independent.
+
+   + Resource manipulation through representations, allowing clients to
+     have all the required information to make changes when they have
+     the representation.
+
+   + Self-descriptive messages, meaning messages are complete in
+     themselves.
+
+   + Hypermedia as the Engine of Application State, meaning the client
+     can walk through the system using referenced hyperlinks
+6. Code on demand. This is an optional requirement, and it's normally not
+used. Servers can submit code in response to help perform operations or
+improve the client; for example, submitting JavaScript to be executed in the
+browser.
+
+*** A More Practical Definition
+
+El principal es que los URI (identificadores uniformes de recursos) deben describir claramente recursos, así como métodos HTTP y acciones a realizar sobre ellos, utilizando el Enfoque CRUD (Crear Recuperar Actualizar Eliminar)
+
+[[./img/HTTP_Methods.png]]
+
+*** Headers and Statuses
+
+An important detail of the HTTP protocol that can sometimes be overlooked is the different headers and status codes.
+
+- [[https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers][Http Headers]]
+- [[http://www.webfx.com/web-development/glossary/http-status-codes/][Http Status]]
+
+*** Data Modeling
+with different ways of handling and representing data to ensure that this critical aspect is well thought through from the outset.
