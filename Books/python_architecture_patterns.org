@@ -61,8 +61,8 @@ a menudo, es un arma de doble filo. y tratar de hacer un sistema más seguro pue
 * Part I: Design
 Design is the first stage of any successful system, and encompasses everything that you work on before you begin implementation.
 
-1. **The Interface**: Define la funcionalidad desde el punto del vista de un usuario.
-2. **Data Storage**: Almacenamiento de los datos.
+1. *The Interface*: Define la funcionalidad desde el punto del vista de un usuario.
+2. *Data Storage*: Almacenamiento de los datos.
    #+begin_comment
    Cambiar la forma en que se almacenan los datos en el sistema es difícil una vez que el sistema está en funcionamiento. operación. No es imposible pero requerirá mucho trabajo.
    #+end_comment
