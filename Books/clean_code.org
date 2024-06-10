@@ -1,0 +1,43 @@
+#+title: Clean Code
+#+author: Alejandro Ayala
+#+STARTUP: showeverything
+
+* CONTENIDO :toc:
+- [[#prologo][Prologo]]
+
+* Prologo
+En medio de la situación y el contexto actual en el que vivimos los afánes por la producción inmediata
+nos terminamos olvidando de los detalles. En los detalles se encuentra la minuciosidad con la que se planeó un proyecto. En medio de la instrumentalización debemos recordar que no solo se trata de escribir para cumplir, también se trata de ser profesional similar a un artista que se fija en los detalles y en lo inmaculado de su obra ya que maś que instrumentos también se es una persona que piensa, siente y trabaja para crear su propia obra (producto).
+
+Tomarse el tiempo de escribir con sentido ó entrando en el tema "Código Limpio" es una parte vital dado que no solo se trata de finalizar un producto como si este no tuviese continuidad y fuese a quedar inmovil en el tiempo. Por el contrarío el software es una parte que se encuentra en permanente cambio y movimiento. Software mal construido es el que esta pensado para no cambiar.
+
+TPM (Total Productive Maintenance), se centra en el mantenimiento y no en la producción.
+Filosofía 5s:
+
+1. Seiri (Organización): Saber donde están las cosas y por ende poderlas encontrar con facilidad.
+2. Seiton (Sistematización): Cada cosa en su sitio.
+3. Seiso (Limpieza): Inundar el codigo con información que no aporta.
+4. Seiketsu (Estandarización): Generar estandares y buenas practicas.
+5. Shutsuke (Disciplina): Seguir las buenas practicas y reflejarlas en el trabajo.
+
+Planear, Prevenir y adelantarse, ser precavido, ser disciplinado y permanentemente realizar mantemiento
+son practicas que un buen profesional debe realizar. Siendo un profesional el que aquel permanentemente esta buscando ascender(Subir de Nivel) ó aquel que cada vez se fija más en los detalles.
+
+En general podría decirse que siempre estamos reparando.
+
+#+BEGIN_QUOTE Paul Valery
+<<Un poema no se acaba nunca y debe estarse retocando continuamente. Dejar de trabajar en el poema es
+señal de abandono.>>
+#+END_QUOTE
+
+- ¿Hemos hecho todo lo posible para dejar las cosas mejor que como las encontramos?
+- ¿Hemos refactorizado el código antes de terminarlo?
+
+#+BEGIN_QUOTE
+- Las cosas pequeñas importan.
+- Dios está en los detalles.
+- La práctica del Software requiere disciplina.
+- Crear código legible es tan importante como crear código ejecutable.
+- De pequeñas semillas crecen grandes árboles.
+- Más vale prevenir que curar.
+#+END_QUOTE
