@@ -4,6 +4,7 @@
 
 * CONTENIDO :toc:
 - [[#prologo][Prologo]]
+- [[#introducción][Introducción]]
 
 * Prologo
 En medio de la situación y el contexto actual en el que vivimos los afánes por la producción inmediata
@@ -41,3 +42,19 @@ señal de abandono.>>
 - De pequeñas semillas crecen grandes árboles.
 - Más vale prevenir que curar.
 #+END_QUOTE
+
+* Introducción
+[[./img/wtf_is_this_shit.png]]
+
+#+begin_quote
+- ¿Qué puerta representa su código?
+- ¿Qué puerta representa a su equipo o asu empresa?
+- ¿Porqué estamos en esa habitación?
+- ¿Es una sencilla revisión del código o hemos detectado un sinfín de problemas terribles?
+- ¿Depuramos presas del pánico el código que pensábamos que funcionaba?
+- ¿Los clientes huyen despavoridos y los directores nos pisan los talones?
+- ¿Cómo asegurarnos de que abrimos la puerta correcta cuando las cosas se ponen feas?
+
+  Respuesta: La Maestría.
+  La maestría se consigue de dos formas: conocimientos y trabajo. Debe adquirir el conocimiento de los principios, patrones, prácticas y heurística propios de un maestro, y dominar dichos conocimientos a través de la práctica.
+#+end_quote
