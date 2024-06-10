@@ -5,6 +5,7 @@
 * CONTENIDO :toc:
 - [[#prologo][Prologo]]
 - [[#introducción][Introducción]]
+- [[#citas][Citas]]
 
 * Prologo
 En medio de la situación y el contexto actual en el que vivimos los afánes por la producción inmediata
@@ -27,21 +28,12 @@ son practicas que un buen profesional debe realizar. Siendo un profesional el qu
 En general podría decirse que siempre estamos reparando.
 
 #+BEGIN_QUOTE Paul Valery
-<<Un poema no se acaba nunca y debe estarse retocando continuamente. Dejar de trabajar en el poema es
-señal de abandono.>>
+Un poema no se acaba nunca y debe estarse retocando continuamente. Dejar de trabajar en el poema es
+señal de abandono.
 #+END_QUOTE
 
 - ¿Hemos hecho todo lo posible para dejar las cosas mejor que como las encontramos?
 - ¿Hemos refactorizado el código antes de terminarlo?
-
-#+BEGIN_QUOTE
-- Las cosas pequeñas importan.
-- Dios está en los detalles.
-- La práctica del Software requiere disciplina.
-- Crear código legible es tan importante como crear código ejecutable.
-- De pequeñas semillas crecen grandes árboles.
-- Más vale prevenir que curar.
-#+END_QUOTE
 
 * Introducción
 [[./img/wtf_is_this_shit.png]]
@@ -58,3 +50,13 @@ señal de abandono.>>
   Respuesta: La Maestría.
   La maestría se consigue de dos formas: conocimientos y trabajo. Debe adquirir el conocimiento de los principios, patrones, prácticas y heurística propios de un maestro, y dominar dichos conocimientos a través de la práctica.
 #+end_quote
+
+* Citas
+#+BEGIN_QUOTE
+- Las cosas pequeñas importan.
+- Dios está en los detalles.
+- La práctica del Software requiere disciplina.
+- Crear código legible es tan importante como crear código ejecutable.
+- De pequeñas semillas crecen grandes árboles.
+- Más vale prevenir que curar.
+#+END_QUOTE
