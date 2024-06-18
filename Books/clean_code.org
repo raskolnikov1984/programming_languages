@@ -102,7 +102,7 @@ de los jefes que no entienden los riesgos de un posible desastre.
 #+end_quote
 
 ** El Enigma:
-**No se Cumple un plazo de entrega cometiendo un error**
+*No se Cumple un plazo de entrega cometiendo un error*
 
 
 * Citas
