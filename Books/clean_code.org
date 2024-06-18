@@ -115,4 +115,4 @@ de los jefes que no entienden los riesgos de un posible desastre.
 - Más vale prevenir que curar.
 #+END_QUOTE
 
-- **Ley de LeBlanc: Después es igual a nunca.**
+*Ley de LeBlanc: Después es igual a nunca.*
