@@ -5,6 +5,13 @@
 * CONTENIDO :toc:
 - [[#prologo][Prologo]]
 - [[#introducción][Introducción]]
+- [[#capítulo-1-código-limpio][Capítulo 1: Código Limpio.]]
+  - [[#hágase-el-código][Hágase el Código:]]
+  - [[#código-incorrecto][Código Incorrecto:]]
+  - [[#el-coste-total-de-un-desastre][El Coste Total de un Desastre:]]
+  - [[#el-gran-cambio-de-diseño][El Gran cambio de diseño:]]
+  - [[#actitud][Actitud:]]
+  - [[#el-enigma][El Enigma:]]
 - [[#citas][Citas]]
 
 * Prologo
@@ -51,6 +58,53 @@ señal de abandono.
   La maestría se consigue de dos formas: conocimientos y trabajo. Debe adquirir el conocimiento de los principios, patrones, prácticas y heurística propios de un maestro, y dominar dichos conocimientos a través de la práctica.
 #+end_quote
 
+* Capítulo 1: Código Limpio.
+** Hágase el Código:
+El código nunca desaparecerá, ya que representa los detalles de los requisitos. Es por esto que el código debe ser:
+
+- Riguroso.
+- Preciso.
+- Formal.
+- Detallado.
+
+Los requisitos bien especificados son tan formales como el código y que pueden actuar como pruebas ejecutables de dicho código. El código es la base para indicar lo de forma precisa lo que deseamos y por esto no desaparecerá.
+** Código Incorrecto:
+
+#+begin_quote
+El Código incorrecto fue el motivo del fin de la empresa.
+
+Sortearnos a lo largo del código. Arrastrarse por una maraña de zarsas y trampras ocultas. Intentamos buscar el camino, una pista de lo que está pasando, pero lo único que vemos es más y más código sin sentido.
+
+Todos hemos visto el lío en el que estábamos y hemos optado por dejarlo para otro día. Todos hemos sentido el alivio de ver cómo un programa incorrecto funcionaba y hemos decidido que un mla programa que funciona es mejor que nada.
+#+end_quote
+** El Coste Total de un Desastre:
+
+El código mal escrito es como una bola de nieve, crece, crece y crece hasta que se vuelve inmanejable. Causando que la productividad del equipo disminuya y acabe por desaparecer.
+
+** El Gran cambio de diseño:
+Los cambios de diseño no siempre resultan ser la mejor estrategía para solucionar la deuda técnica. Corriendo el riesgo de caer en un circulo vicioso. Mal codígo crea más mal código.
+
+#+begin_quote
+Dedicar tiempo a que el código sea correcto no sólo es rentable, es una cuestión de supervivencia profesional.
+#+end_quote
+
+** Actitud:
+
+No ser profesional.
+
+#+begin_quote
+imagine que es médico y un paciente le exige que no se lave las manos antes de una operación porque se pierde demasiado tiempo[2]. En este caso, el paciente es el jefe, pero el médico debe negarse a lo que pide.
+¿Por qué? Porque el médico sabe más que el paciente sobre los riesgos de
+infecciones. No sería profesional (incluso sería ilegal) que el médico cediera a las exigencias del paciente.
+
+Tampoco sería profesional que los programadores cedieran a la voluntad
+de los jefes que no entienden los riesgos de un posible desastre.
+#+end_quote
+
+** El Enigma:
+**No se Cumple un plazo de entrega cometiendo un error**
+
+
 * Citas
 #+BEGIN_QUOTE
 - Las cosas pequeñas importan.
@@ -60,3 +114,5 @@ señal de abandono.
 - De pequeñas semillas crecen grandes árboles.
 - Más vale prevenir que curar.
 #+END_QUOTE
+
+- **Ley de LeBlanc: Después es igual a nunca.**
