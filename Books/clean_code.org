@@ -1,4 +1,4 @@
-#+title: Clean Code
+0#+title: Clean Code
 #+author: Alejandro Ayala
 #+STARTUP: showeverything
 
@@ -12,6 +12,10 @@
   - [[#el-gran-cambio-de-diseño][El Gran cambio de diseño:]]
   - [[#actitud][Actitud:]]
   - [[#el-enigma][El Enigma:]]
+  - [[#el-arte-del-código-limpio][¿El arte del código limpio?]]
+  - [[#concepto-de-código-limpio][Concepto de código limpio]]
+  - [[#la-regla-del-boy-scout][La regla del Boy Scout]]
+  - [[#conclusión][Conclusión]]
 - [[#citas][Citas]]
 
 * Prologo
@@ -102,8 +106,67 @@ de los jefes que no entienden los riesgos de un posible desastre.
 #+end_quote
 
 ** El Enigma:
+
 *No se Cumple un plazo de entrega cometiendo un error*
 
+** ¿El arte del código limpio?
+Desarrollar el sentido para escribir código limpio.. El programador es un artista que puede transformar un lienzo en blanco en un sistema de código elegante.
+
+** Concepto de código limpio
+#+begin_quote Bjarne Stroustrup
++ Elegante y eficaz.
++ Lógica correcta.
++ Dependencias mínimas.
++ El código limpio hace bien una cosa.
+#+end_quote
+
+#+begin_quote Metafora de las ventanas rotas
+Un edificio con ventanas rotas parece abandonado. Y hace que otros lo abandonen. Dejan que se rompan otras ventanas. E incluso las rompen a propósito. La fachada se ensucia con pintadas y se acumula la basura. Una ventana rota inicia el proceso de la decadencia.
+#+end_quote
+
+El código limpio muestra gran atención al detalle y hace solo una cosa bien.
+
+#+begin_quote Grady Booch
+El código limpio es simple y directo. El código limpio se lee como un texto bien escrito. El código limpio no oculta la intención del diseñador, sino que muestra nítidas abstracciones y líneas directas de control.
+#+end_quote
+- Facíl de leer (Legibilidad).
+
+
+#+begin_quote Dave Thomas
+El código limpio se puede leer y mejorar por parte de un programador
+que no sea su autor original. Tiene pruebas de unidad y de aceptación.
+Tiene nombres con sentido. Ofrece una y no varias formas de hacer algo. Sus dependencias son mínimas, se definen de forma explícita y ofrece una API clara y mínima. El código debe ser culto en función del lenguaje, ya que no toda la información necesaria se puede expresar de forma clara en el código.
+#+end_quote
+- Código controlado por pruebas.
+
+#+begin_quote Michael Feathers
+Podría enumerar todas las cualidades del código limpio, pero hay una
+principal que engloba a todas ellas. El código limpio siempre parece que ha sido escrito por alguien a quien le importa. No hay nada evidente que hacer para mejorarlo. El autor del código pensó en todos los aspectos posibles y si intentamos imaginar alguna mejora, volvemos al punto de partida y sólo nos queda disfrutar del código que alguien a quien le importa realmente nos ha proporcionado
+#+end_quote
+
+- El código limpio es aquél al que se le ha dado importancia. Alguien ha dedicado su tiempo para que sea sencillo y ha prestado atención a los detalles. Se ha preocupado.
+
+- En estos breves párrafos, Ron resume el contenido de este libro. Nada de duplicados, un objetivo, expresividad y pequeñas abstracciones. Todo está ahí.
+
+- La próxima vez que escriba una línea de código, recuerde que es un autor y que escribe para que sus lectores juzguen su esfuerzo.
+
+** La regla del Boy Scout
+#+begin_quote
+Dejar el campamento más limpio de lo que se ha encontrado.
+#+end_quote
+
+** Conclusión
+#+begin_quote
+¿Recuerda el chiste sobre el violinista que se pierde camino de un concierto?
+Se cruza con un anciano y le pregunta cómo llegar al Teatro Real.
+
+El anciano mira al violinista y al violín que lleva bajo el brazo y le responde:
+
+«Practique joven, practique».
+
+#+end_quote
+
+- La practica hace al maestro.
 
 * Citas
 #+BEGIN_QUOTE
