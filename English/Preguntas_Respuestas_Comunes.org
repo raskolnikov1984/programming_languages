@@ -79,7 +79,6 @@ general form:  I LIKE + A VERB - ING
 | Eat    | Ate    |
 | Drink  | Drank  |
 | Sing   | Sang   |
-|--------+--------|
 | Become | Became |
 | Choose | chose  |
 | do     | did    |
@@ -98,15 +97,15 @@ Is the past of the verb to be.
 - I am at home today.
 - I was at a concert yesterday.
 
-  | Pronoun | Affrimative | Negative |
-  |---------|-------------|----------|
-  | I       | WAS         | WASN'T   |
-  | HE      | WAS         | WASN'T   |
-  | SHE     | WAS         | WASN'T   |
-  | IT      | WAS         | WASN'T   |
-  | YOU     | WERE        | WEREN'T  |
-  | WE      | WERE        | WEREN'T  |
-  | THEY    | WERE        | WEREN'T  |
+| Pronoun | Affrimative | Negative |
+|---------+-------------+----------|
+| I       | WAS         | WASN'T   |
+| HE      | WAS         | WASN'T   |
+| SHE     | WAS         | WASN'T   |
+| IT      | WAS         | WASN'T   |
+| YOU     | WERE        | WEREN'T  |
+| WE      | WERE        | WEREN'T  |
+| THEY    | WERE        | WEREN'T  |
 
 Examples:
 - She was busy in the morning
@@ -115,3 +114,27 @@ Examples:
 - They were at school.
 - We weren't exercising.
 - We were painting.
+
+| Verb    | Past     |
+|---------+----------|
+| Walk    | Walked   |
+| Play    | Played   |
+| call    | Called   |
+| accept  | accepted |
+| bake    | baked    |
+| change  | changed  |
+| decide  | decided  |
+| imagine | imagined |
+| talk    | talked   |
+
+Examples:
+
+- Kevin *baked* (bake) a cake last week.
+- They *played* (play) video games all night.
+
+What was his childhood like?
+
+1. He *played* (play) in the park.
+2. He *had* (have) long hair.
+3. I *lived* (live) with my parents and my siblings
+4. I *loved* cartoons.
