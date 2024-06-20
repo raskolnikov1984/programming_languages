@@ -108,7 +108,7 @@ Is the past of the verb to be.
 - I was at a concert yesterday.
 
   | Pronoun | Affrimative | Negative |
-  +---------+-------------+----------+
+  |---------|-------------|----------|
   | I       | WAS         | WASN'T   |
   | HE      | WAS         | WASN'T   |
   | SHE     | WAS         | WASN'T   |
