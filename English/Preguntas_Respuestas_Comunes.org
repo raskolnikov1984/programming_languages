@@ -74,27 +74,18 @@ general form:  I LIKE + A VERB - ING
 ** Let's Talk about the past!!
 *** Irregulars Verbs
 
-+--------+-------+
-|Verb    | past  |
-+--------+-------+
-|Eat     | Ate   |
-+--------+-------+
-|Drink   | Drank |
-+--------+-------+
-|Sing    | Sang  |
-+--------+-------+
-|Become  | Became|
-+--------+-------+
-|Choose  | chose |
-+--------+-------+
-| do     |  did  |
-+--------+-------+
-|feel    | felt  |
-+--------+-------+
-|give    | gave  |
-+--------+-------+
-|have    | had   |
-+--------+-------+
+| Verb   | past   |
+|--------+--------|
+| Eat    | Ate    |
+| Drink  | Drank  |
+| Sing   | Sang   |
+|--------+--------|
+| Become | Became |
+| Choose | chose  |
+| do     | did    |
+| feel   | felt   |
+| give   | gave   |
+| have   | had    |
 
 
 ** Examples:
