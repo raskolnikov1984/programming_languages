@@ -107,7 +107,7 @@ Is the past of the verb to be.
 - I am at home today.
 - I was at a concert yesterday.
 
-  +---------------------+
+  +----------+----------+
   |   Afirmative form   |
   +----------+----------+
   |I         | WAS      |
@@ -125,7 +125,7 @@ Is the past of the verb to be.
   |THEY      | WERE     |
   +----------+----------+
 
-  +---------------------+
+  +----------+----------+
   |     Negative Form   |
   +----------+----------+
   |I         | WASN'T   |
