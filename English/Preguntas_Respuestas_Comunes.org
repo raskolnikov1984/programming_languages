@@ -107,22 +107,15 @@ Is the past of the verb to be.
 - I am at home today.
 - I was at a concert yesterday.
 
-  |Pronoun   | Affrimative | Negative|
-  +----------+----------+----------+
-  |I         | WAS      | WASN'T   |
-  +----------+----------+----------+
-  |HE        | WAS      | WASN'T   |
-  +----------+----------+----------+
-  |SHE       | WAS      | WASN'T   |
-  +----------+----------+----------+
-  |IT        | WAS      | WASN'T   |
-  +----------+----------+----------+
-  |YOU       | WERE     | WEREN'T  |
-  +----------+----------+----------+
-  |WE        | WERE     | WEREN'T  |
-  +----------+----------+----------+
-  |THEY      | WERE     | WEREN'T  |
-  +----------+----------+----------+
+  | Pronoun | Affrimative | Negative |
+  +---------+-------------+----------+
+  | I       | WAS         | WASN'T   |
+  | HE      | WAS         | WASN'T   |
+  | SHE     | WAS         | WASN'T   |
+  | IT      | WAS         | WASN'T   |
+  | YOU     | WERE        | WEREN'T  |
+  | WE      | WERE        | WEREN'T  |
+  | THEY    | WERE        | WEREN'T  |
 
 Examples:
 - She was busy in the morning
