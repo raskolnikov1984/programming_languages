@@ -107,6 +107,7 @@ Is the past of the verb to be.
 - I am at home today.
 - I was at a concert yesterday.
 
+  |Pronoun   | Affrimative | Negative|
   +----------+----------+----------+
   |I         | WAS      | WASN'T   |
   +----------+----------+----------+
