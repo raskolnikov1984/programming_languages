@@ -108,8 +108,6 @@ Is the past of the verb to be.
 - I was at a concert yesterday.
 
   +----------+----------+
-  |   Afirmative form   |
-  +----------+----------+
   |I         | WAS      |
   +----------+----------+
   |HE        | WAS      |
@@ -125,8 +123,6 @@ Is the past of the verb to be.
   |THEY      | WERE     |
   +----------+----------+
 
-  +----------+----------+
-  |     Negative Form   |
   +----------+----------+
   |I         | WASN'T   |
   +----------+----------+
