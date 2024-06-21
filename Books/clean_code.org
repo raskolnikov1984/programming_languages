@@ -18,6 +18,7 @@
   - [[#conclusión][Conclusión]]
 - [[#capítulo-2-nombre-con-sentido][Capítulo 2: Nombre con sentido.]]
   -  [[#conclusión-1][Conclusión.]]
+- [[#capítulo-3-funciones][Capítulo 3: Funciones.]]
 - [[#citas][Citas]]
 
 * Prologo
@@ -226,6 +227,56 @@ El anciano mira al violinista y al violín que lleva bajo el brazo y le responde
 
 **  Conclusión.
 Lo más complicado a la hora de elegir un buen nombre es que requiere habilidad descriptiva y acervo cultural. Es un problema de formación más que técnico, empresarial o administrativo. Como resultado, mucha gente del sector no aprende a hacerlo bien. La gente teme que al cambiar los nombres otros programadores se quejen. Nosotros no compartimos ese temor y agradecemos los cambios de nombre (siempre que sean a mejor). En muchos casos no memorizamos los nombres de clases y métodos. Usamos herramientas modernas para estos detalles y así poder centrarnos en si el código se lee como frases o párrafos, o al menos como tablas y estructuras de datos (una frase no siempre es la mejor forma de mostrar datos). Seguramente acabará sorprendiendo a alguien cuando cambie los nombres, como puede
+
+* Capítulo 3: Funciones.
+¿Qué tiene la función del Listado 3-2 para que resulte sencilla de leer y entender?
+¿Qué hay que hacer para que una función transmita su intención?
+¿Qué atributos podemos asignar a nuestras funciones para que el lector pueda intuir el tipo de programa al que pertenecen?
+
+  - Tamaño reducido.
+    - Aproximadamente 20 líneas (Por poner un tamaño).
+  - Bloques y sangrado.
+    - Uno o dos niveles de sangrado
+  - Hacer una sola cosa.
+    #+begin_quote
+    LAS FUNCIONES SÓLO DEBEN HACER UNA COSA. DEBEN HACERLO BIEN Y DEBE SER LO ÚNICO QUE HAGAN.
+
+    Para renderPageWithSetupsAndTeardowns, comprobamos si la página es de prueba y,
+    en caso afirmativo, incluimos las configuraciones y los detalles.
+    En ambos casos, la representamos en HTML.
+
+    Si una función sólo realiza los pasos situados un nivel por debajo del
+    nombre de la función, entonces hace una cosa.
+    #+end_quote
+  - Secciones en funciones.
+    #+begin_quote
+    Fíjese en el Listado 4-7. Verá que la función generatePrimes se divide en
+    secciones como declaraciones, inicializaciones y filtros. Es un síntoma
+    evidente de que hace más de una cosa. Las funciones que hacen una sola cosa
+    no se pueden dividir en secciones.
+    #+end_quote
+
+  - Un nivel de abstracción por función.
+  - Leer código de arriba a abajo: la regla descendente
+    El Objetivo es que el código se lea como un texto de arriba a abajo.
+
+    Queremos leer el programa como si fuera un conjunto de párrafos TO.
+    #+begin_quote
+    Para incluir configuraciones y detalles, incluimos configuraciones,
+    después del contenido de la página de prueba, y por último los
+    detalles.
+
+    Para incluir las configuraciones, incluimos la configuración de suite
+    si se trata de una suite, y después la configuración convencional.
+
+    Para incluir la configuración de suite; buscamos la jerarquía
+    principal de la página SuiteSetUp y añadimos una instrucción
+    include con la ruta de dicha página.
+    Para buscar la jerarquía principal…
+    #+end_quote
+  - Usar nombres descriptivos
+    No tema los nombres extensos. Un nombre descriptivo extenso
+    es mucho mejor que uno breve pero enigmático.
 
 
 * Citas
