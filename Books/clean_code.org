@@ -1,6 +1,6 @@
 0#+title: Clean Code
 #+author: Alejandro Ayala
-#+STARTUP: showeverything
+#+STARTUP: show2levels
 
 * CONTENIDO :toc:
 - [[#prologo][Prologo]]
@@ -16,6 +16,9 @@
   - [[#concepto-de-código-limpio][Concepto de código limpio]]
   - [[#la-regla-del-boy-scout][La regla del Boy Scout]]
   - [[#conclusión][Conclusión]]
+- [[#capítulo-2-nombre-con-sentido][Capítulo 2: Nombre con sentido.]]
+  -  [[#conclusión-1][Conclusión.]]
+- [[#capítulo-3-funciones][Capítulo 3: Funciones.]]
 - [[#citas][Citas]]
 
 * Prologo
@@ -167,6 +170,114 @@ El anciano mira al violinista y al violín que lleva bajo el brazo y le responde
 #+end_quote
 
 - La practica hace al maestro.
+
+* Capítulo 2: Nombre con sentido.
+1. *Usar nombres que revelen las intenciones.*
+   - ¿Por qué existe?
+   - ¿Qué hace?
+   - ¿Cómo se usa?
+
+2. *Evitar la desinformación.*
+   - Evitar asignar nombres que no den información veridica de porque existen.
+
+3. *Realizar distinciones con sentido.*
+   - Buscar agregar información, no duplicar información que no generé  distinciones.
+     Debe diferenciar los nombres de forma que el lector aprecie las diferencias.
+
+4. *Usar nombres que se puedan pronunciar.*
+   - Crear nombres pronunciables.
+
+5. *Usar nombres que se puedan buscar.*
+   Los nombres de una letra y las constantes numéricas tienen un problema: no son fáciles de localizar en el texto.
+
+6. *No utilizar prefijos, mejor un nombre completo y con sentido*
+7. *Evitar asignaciones mentales*
+   #+begin_comment
+   Una diferencia entre un programador inteligente y un programador profesional es que este último sabe que la claridad es lo que importa. Los profesionales usan sus poderes para hacer el bien y crean código que otros puedan entender.
+   #+end_comment
+
+8. *Nombres de clases*
+   Las clases y los objetos deben tener nombres o frases de nombre como Customer, WikiPage, Account y AddressParser. Evite palabras como Manager, Processor, Data, o Info en el nombre de una clase. El nombre de
+   una clase no debe ser un verbo.
+
+9. *Nombres de Metodos.*
+   Los métodos deben tener nombres de verbo como postPayment, deletePage o save. Los métodos de acceso, de modificación y los predicados deben tener como nombre su valor y usar como prefijo get, set e is.
+
+10. *No se exceda con el atractivo*
+    Si los nombres son demasiado inteligentes, sólo los recordarán los que compartan el sentido del humor de su autor, y sólo mientras se acuerden del chiste. ¿Sabrán qué significa la función HolyHandGrenade?
+    Sin duda es atractiva, pero en este caso puede que DeleteItems fuera más indicado. Opte por la claridad antes que por el entretenimiento. En el código, el atractivo suele aparecer como formas
+    coloquiales o jergas. Por ejemplo, no use whack() en lugar de kill(). No recurra a bromas culturales como eatMyShorts() si quiere decir abort(). Diga lo que piense. Piense lo que diga.
+
+11. *Una palabra por concepto*
+    Unificar el lenguaje
+
+12. *No haga juegos de palabras*
+    Nuestro objetivo, como autores, es facilitar la comprensión del código. Queremos que el código sea algo rápido, no un estudio exhaustivo. Queremos usar un modelo en el que el autor sea el responsable de transmitir el significado, no un modelo académico que exija investigar el significado mostrado.
+
+13. *Usar nombres de dominios de soluciones*
+    Recuerde que los lectores de su código serán programadores. Por ello, use términos informáticos, algoritmos, nombres de patrones, términos matemáticos y demás.
+
+14. *Usar nombres de dominios de problemas*
+    Cuando no exista un término de programación para lo que esté haciendo, use el nombre del dominio de problemas.
+
+15. *Añadir contexto con sentido.*
+
+16. *No añadir contextos inncesarios*
+    Los nombres breves suelen ser más adecuados que los extensos, siempre que sean claros. No añada más contexto del necesario a un nombre. Los nombres accountAddress y customerAddress son perfectos para instancias de la clase Address pero no sirven como nombres de clase. Address sirve como nombre de clase. Para distinguir entre direcciones MAC, direcciones de puertos y direcciones Web, podría usar PostalAddress, MAC y URI. Los nombres resultantes son más precisos, el objetivo de cualquier nombre.
+
+**  Conclusión.
+Lo más complicado a la hora de elegir un buen nombre es que requiere habilidad descriptiva y acervo cultural. Es un problema de formación más que técnico, empresarial o administrativo. Como resultado, mucha gente del sector no aprende a hacerlo bien. La gente teme que al cambiar los nombres otros programadores se quejen. Nosotros no compartimos ese temor y agradecemos los cambios de nombre (siempre que sean a mejor). En muchos casos no memorizamos los nombres de clases y métodos. Usamos herramientas modernas para estos detalles y así poder centrarnos en si el código se lee como frases o párrafos, o al menos como tablas y estructuras de datos (una frase no siempre es la mejor forma de mostrar datos). Seguramente acabará sorprendiendo a alguien cuando cambie los nombres, como puede
+
+* Capítulo 3: Funciones.
+¿Qué tiene la función del Listado 3-2 para que resulte sencilla de leer y entender?
+¿Qué hay que hacer para que una función transmita su intención?
+¿Qué atributos podemos asignar a nuestras funciones para que el lector pueda intuir el tipo de programa al que pertenecen?
+
+  - Tamaño reducido.
+    - Aproximadamente 20 líneas (Por poner un tamaño).
+  - Bloques y sangrado.
+    - Uno o dos niveles de sangrado
+  - Hacer una sola cosa.
+    #+begin_quote
+    LAS FUNCIONES SÓLO DEBEN HACER UNA COSA. DEBEN HACERLO BIEN Y DEBE SER LO ÚNICO QUE HAGAN.
+
+    Para renderPageWithSetupsAndTeardowns, comprobamos si la página es de prueba y,
+    en caso afirmativo, incluimos las configuraciones y los detalles.
+    En ambos casos, la representamos en HTML.
+
+    Si una función sólo realiza los pasos situados un nivel por debajo del
+    nombre de la función, entonces hace una cosa.
+    #+end_quote
+  - Secciones en funciones.
+    #+begin_quote
+    Fíjese en el Listado 4-7. Verá que la función generatePrimes se divide en
+    secciones como declaraciones, inicializaciones y filtros. Es un síntoma
+    evidente de que hace más de una cosa. Las funciones que hacen una sola cosa
+    no se pueden dividir en secciones.
+    #+end_quote
+
+  - Un nivel de abstracción por función.
+  - Leer código de arriba a abajo: la regla descendente
+    El Objetivo es que el código se lea como un texto de arriba a abajo.
+
+    Queremos leer el programa como si fuera un conjunto de párrafos TO.
+    #+begin_quote
+    Para incluir configuraciones y detalles, incluimos configuraciones,
+    después del contenido de la página de prueba, y por último los
+    detalles.
+
+    Para incluir las configuraciones, incluimos la configuración de suite
+    si se trata de una suite, y después la configuración convencional.
+
+    Para incluir la configuración de suite; buscamos la jerarquía
+    principal de la página SuiteSetUp y añadimos una instrucción
+    include con la ruta de dicha página.
+    Para buscar la jerarquía principal…
+    #+end_quote
+  - Usar nombres descriptivos
+    No tema los nombres extensos. Un nombre descriptivo extenso
+    es mucho mejor que uno breve pero enigmático.
+
 
 * Citas
 #+BEGIN_QUOTE

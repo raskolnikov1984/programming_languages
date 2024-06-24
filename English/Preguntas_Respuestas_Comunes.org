@@ -1,0 +1,140 @@
+#+title: Preguntas Respuestas Comunes
+#+author: Alejandro Ayala
+#+startup: show2levels
+
+* Lear in This Course :toc:
+- [[#content][Content]]
+  - [[#what-are-your-likes-and-dislikes][What are your likes and dislikes?]]
+  - [[#other-peoples-preference][Other People's Preference]]
+  - [[#practive-worksheet][Practive Worksheet]]
+  - [[#whar-are-yout-hobbies][Whar are yout hobbies?]]
+  - [[#lets-talk-about-the-past][Let's Talk about the past!!]]
+  - [[#examples][Examples:]]
+  - [[#was--were][Was / were]]
+
+* Content
+- Negative form of the past simple.
+- Determines.
+- Present Continuos.
+- Like/Love/Hate with - ing.
+- How much/How many.
+- Connect diferents ideas with And, 's, yes/no question in the past.
+- Verbs in the past.
+- Prepositions of place.
+- How often?, How long?, How far?
+- Expressins of time.
+- Adjectives.
+- Want To.
+- Wh Questions.
+
+** What are your likes and dislikes?
+general form:  I LIKE + A VERB - ING
+
++ I like
+  1. I like *solving* jigsaw puzzles
+  2. I like reading books about psychology.
+
++ I love
+  1. I love eating pasta.
+  2. I love playing with my dog.
+
++ I hate
+  1. I hate feeling cold.
+  2. I hate waiting a long time.
+
+** Other People's Preference
+- He / She / It Likes.
+- He / She / It Loves.
+- He / She / It Hates.
+
+  #+begin_example
+  This is Carlos:
+
+  What are his likes and dislikes?.
+  - He loves cooking.
+  - He hates eating sushi.
+  #+end_example
+
+** Practive Worksheet
+#+begin_example
+- Naomi hates working late.
+- Naomi likes reading comic books.
+- Naomi loves playing Dungeons & Dragons.
+- Naomi likes programming
+- Naomi loves working out in the morning.
+#+end_example
+
+** Whar are yout hobbies?
+- On the weekends I like exercising and going out with my friends?
+- Next year, I want to travel to spain, France and Italy.
+- I like reading, watching movies and gardening.
+- What are alma's hobbies?
+- She likes skateboarding, doing yoga and dancing.
+
+** Let's Talk about the past!!
+*** Irregulars Verbs
+
+| Verb   | past   |
+|--------+--------|
+| Eat    | Ate    |
+| Drink  | Drank  |
+| Sing   | Sang   |
+| Become | Became |
+| Choose | chose  |
+| do     | did    |
+| feel   | felt   |
+| give   | gave   |
+| have   | had    |
+
+
+** Examples:
+- He gave (give) her a flower
+- She did (do) her homework
+
+** Was / were
+Is the past of the verb to be.
+
+- I am at home today.
+- I was at a concert yesterday.
+
+| Pronoun | Affrimative | Negative |
+|---------+-------------+----------|
+| I       | WAS         | WASN'T   |
+| HE      | WAS         | WASN'T   |
+| SHE     | WAS         | WASN'T   |
+| IT      | WAS         | WASN'T   |
+| YOU     | WERE        | WEREN'T  |
+| WE      | WERE        | WEREN'T  |
+| THEY    | WERE        | WEREN'T  |
+
+Examples:
+- She was busy in the morning
+- They were excited to play with leaves yesterday.
+- They weren't at the library
+- They were at school.
+- We weren't exercising.
+- We were painting.
+
+| Verb    | Past     |
+|---------+----------|
+| Walk    | Walked   |
+| Play    | Played   |
+| call    | Called   |
+| accept  | accepted |
+| bake    | baked    |
+| change  | changed  |
+| decide  | decided  |
+| imagine | imagined |
+| talk    | talked   |
+
+Examples:
+
+- Kevin *baked* (bake) a cake last week.
+- They *played* (play) video games all night.
+
+What was his childhood like?
+
+1. He *played* (play) in the park.
+2. He *had* (have) long hair.
+3. I *lived* (live) with my parents and my siblings
+4. I *loved* cartoons.
