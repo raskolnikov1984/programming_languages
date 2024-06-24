@@ -43,8 +43,10 @@ python3 manage.py startapp members
       python3 manage.py makemigrations members
       #+end_src
    2. Execute the migrations.
-      #+begin_src bash
+      #+begin_src bash bash
       python3 manage.py migrate
+      # ver una migración en especifico
+      python3 manage.py slqmigrate members 001
       #+end_src
    3. add records.
       #+begin_src bash
