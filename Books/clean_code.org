@@ -257,7 +257,7 @@ Lo más complicado a la hora de elegir un buen nombre es que requiere habilidad 
     #+end_quote
 
   - Un nivel de abstracción por función.
-  - Leer código de arriba a abajo: la regla descendente
+  - Leer código de arriba a abajo :: la regla descendente
     El Objetivo es que el código se lea como un texto de arriba a abajo.
 
     Queremos leer el programa como si fuera un conjunto de párrafos TO.
@@ -274,9 +274,33 @@ Lo más complicado a la hora de elegir un buen nombre es que requiere habilidad 
     include con la ruta de dicha página.
     Para buscar la jerarquía principal…
     #+end_quote
-  - Usar nombres descriptivos
+  - Usar nombres descriptivos ::
     No tema los nombres extensos. Un nombre descriptivo extenso
     es mucho mejor que uno breve pero enigmático.
+
+  - Argumentos de Funciones ::
+    El número ideal de argumentos para una función es cero.
+
+    * monádico: 1 argumento.
+    * diádico: 2 argumentos.
+    * triádico: 3 argumentos
+    * poliádico: Más de 3 argumentos.
+
+  - Formas monádicas habituales ::
+    Motivos principales para usar un solo argumento a una funció.
+
+    1. Realizar una pregunta sobre el argumento.
+       #+begin_src python
+def fileExists():
+    pass
+
+fileExists("MyFile")
+       #+end_src
+
+    2. Procese el argumento, lo transforme en otra cosa y lo devuelva.
+
+  - Argumentos de indicador ::
+    Pasar  un valor Booleano a una función es una práctica totalmente desaconsejable.
 
 
 * Citas
