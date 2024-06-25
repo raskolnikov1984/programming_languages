@@ -1,0 +1,38 @@
+#+title: Preposiciones_de_lugar
+
+* Prepositions of place
+| Preposition     |                      |
+|-----------------+----------------------|
+| On              | Sobre                |
+| In              | En                   |
+| Above           | Arriba               |
+| Below           | Abajo                |
+| Over            | Cubriendo            |
+| Under           | bajo                 |
+| In front of     | En frente de         |
+| Accross from    | Em frente de (Lugar) |
+| Behind          | De tras              |
+| Between         | Entre                |
+| Next to         | Al Lado              |
+| To the left of  | A la izquierda de    |
+| TO the right of | A la derecha de      |
+
+- Examples ::
+  + The plant is *next to* the sofa.
+  + The plant is *to the left* of sofa.
+
+  + The glass of water is in front *in front* the keyboard.
+
+  + The laptop is *on* the rug.
+
+  + The vintage store is *next to* the café
+
+  + The blue house is *between* the gray house and the green house.
+
+- Exercises :: Practicing
+
+  1. The firehouse is between the park and the post office.
+  2. The pond is next to the mall.
+  3. The library is across from the post office.
+  4. My house is next to the school.
+  5. The park is across from the pond.
