@@ -19,6 +19,11 @@
 - [[#capítulo-2-nombre-con-sentido][Capítulo 2: Nombre con sentido.]]
   -  [[#conclusión-1][Conclusión.]]
 - [[#capítulo-3-funciones][Capítulo 3: Funciones.]]
+- [[#capítulo-4-comentarios][Capítulo 4: Comentarios]]
+  - [[#cuando-escribir-un-comentario][Cuando escribir un comentario]]
+  - [[#los-comentarios-no-compensan-el-código-incorrecto][Los comentarios no compensan el código incorrecto]]
+  - [[#explicarse-en-el-código][Explicarse en el código]]
+  - [[#comentarios-necesarios][Comentarios Necesarios]]
 - [[#citas][Citas]]
 
 * Prologo
@@ -322,6 +327,67 @@ fileExists("MyFile")
     parte de la historia.
 
     Un sistema nos cuenta una historia.
+
+* Capítulo 4: Comentarios
+#+begin_quote
+No comente el código incorrecto, reescríbalo.
+#+end_quote
+
+No hay nada más útil que un comentario bien colocado. No hay nada que colapse más un módulo que comentarios dogmáticos inncesarios. No hay nada más dañino que un comentario antiguo que propague mentiras y desinformación.
+
+** Cuando escribir un comentario ::
+Cuando tenga que escribir un comentario, piense si no existe otra forma de expresarse en el código. Siempre que se exprese en el código, debe felicitarse. Siempre que escriba un comentario, debe hacer un gesto de desaprobación y sentir su incapacidad para expresarse.
+
+#+begin_quote
+¿Por qué estoy en contra de los comentarios? Porque mienten. No
+siempre y no siempre intencionadamente, pero lo hacen. Cuando más antiguo
+es un comentario y más se aleja del código que describe, mayor es la
+probabilidad de que sea equivocado. El motivo es sencillo. Los
+programadores no los pueden mantener.
+
+El código cambia y evoluciona. Los fragmentos cambian de lugar, se
+bifurcan, se reproducen y se vuelven a combinar para crear quimeras.
+Desafortunadamente, los comentarios no siempre siguen el ritmo, no siempre
+pueden hacerlo y suelen separarse del código que describen y se convierten
+en huérfanos sin precisión alguna.
+
+Se podría afirmar que los programadores deben ser lo bastante disciplinados como para mantener los comentarios actualizados, relevantes y precisos. De acuerdo, debería, pero esa energía debería invertirse en crear código claro y expresivo que no necesite comentario alguno.
+
+La verdad sólo se encuentra en un punto: el código. Sólo el código puede
+contar lo que hace. Es la única fuente de información precisa. Por tanto,
+aunque los comentarios sean necesarios en ocasiones, dedicaremos nuestra
+energía a minimizarlos.
+#+end_quote
+
+** Los comentarios no compensan el código incorrecto ::
+Una de las principales motivaciones para crear comentarios es el código incorrecto. Creamos un módulo y sabemos que es confuso y está desorganizado. Sabemos que es un desastre y entonces decidimos comentarlo. Error. Mejor límpielo.
+
+El código claro y expresivo sin apenas comentarios es muy superior al
+código enrevesado y complejo con multitud de comentarios. En lugar de
+perder tiempo escribiendo comentarios que expliquen el desastre cometido,
+dedíquelo a solucionarlo.
+
+** Explicarse en el código ::
+En ocasiones, el código es un pobre vehículo de expresión.
+Desafortunadamente, muchos programadores lo entienden como que el
+código no es un buen medio de expresión.
+
+En muchos casos, basta con crear una función que diga lo mismo que el comentario que pensaba escribir.
+
+** Comentarios Necesarios ::
+- Comentarios Legales.
+- Comentarios Informativos.
+- Explicar la intención.
+- Clarificación *Warning*
+- Advertir de las conscuencias. *Danger*
+
+*No balbucear en el código*
+
+*Cualquier comentario que le obligue a buscar su significado en otro módulo ha fallado en su intento de comunicación y no merece los bits que consume.*
+
+- Encabezados de función ::
+  Las funciones breves apenas requieren explicación. Un nombre bien elegido para una función que hace una cosa suele ser mejor que un encabezado de comentario.
+
 
 * Citas
 #+BEGIN_QUOTE
