@@ -1,6 +1,6 @@
 0#+title: Clean Code
 #+author: Alejandro Ayala
-#+STARTUP: show2levels
+#+STARTUP: showstars
 
 * CONTENIDO :toc:
 - [[#prologo][Prologo]]
@@ -24,6 +24,9 @@
   - [[#los-comentarios-no-compensan-el-código-incorrecto][Los comentarios no compensan el código incorrecto]]
   - [[#explicarse-en-el-código][Explicarse en el código]]
   - [[#comentarios-necesarios][Comentarios Necesarios]]
+- [[#dar-formato][Dar Formato]]
+  - [[#la-función-del-formato][La función del formato]]
+  - [[#la-metafora-del-periódico][La metafora del periódico]]
 - [[#citas][Citas]]
 
 * Prologo
@@ -389,6 +392,55 @@ En muchos casos, basta con crear una función que diga lo mismo que el comentari
   Las funciones breves apenas requieren explicación. Un nombre bien elegido para una función que hace una cosa suele ser mejor que un encabezado de comentario.
 
 
+* Dar Formato
+#+begin_quote
+Cuando los usuarios miran entre bastidores, queremos que queden
+impresionados por el atractivo, la coherencia y la atención al detalle que
+perciben. Queremos que el orden les sorprenda, que abran los ojos con
+asombro cuando se desplacen por los módulos. Queremos que aprecien que
+se trata de un trabajo de profesionales. Si ven una masa amorfa de código que
+parece escrito por un grupo de marineros borrachos, es probable que piensen
+que sucederá lo mismo en otros aspectos del proyecto.
+#+end_quote
+
+** La función del formato
+- Ser Claro. El formato del código se basa en la comunicación y la comunicación debe ser el principal pilar de un desarrollador profesional.
+
+#+begin_quote
+Puede que piense que conseguir que algo funcione es la principal
+preocupación de un programador profesional. Espero que este libro le haga
+cambiar de idea. La funcionalidad que cree hoy es muy probable que cambie
+en la siguiente versión, pero la legibilidad de su código afectará
+profundamente a todos los cambios que realice. El estilo del código y su
+legibilidad establecen los precedentes que afectan a la capacidad de
+mantenimiento y ampliación mucho después de que el código cambie. Su
+estilo y su disciplina sobrevivirán, aunque el código no lo haga.
+#+end_quote
+
+- Los archivos de pequeño tamaño se entienden mejor que los grandes.
+
+** La metafora del periódico
+Un archivo de código deber ser como un artículo de periódico. El nombre debe ser sencillo pero claro.
+
+1. Nombre sencillo, pero claro.
+2. Los Elementos superiores del archivo deben proporcionar conceptos y algoritmos de nivel superior.
+3. Los Detalles deben aumetar segú avanzamos, hasta que en la aprte final encontremos las funciones de nivel inferior del archivo.
+4. Dejar saltos línea entre aparición de nuevos conceptos.
+5. Si una función invoca otra, deben estar verticalmente próximas (Afinidad conceptual).
+6. Orden Vertical.
+7. Límite horizontal de la línea.
+8. Reglas de equipo. Un equipo de programadores debe acordar un único estilo de formato y todos
+los integrantes del equipo deben aplicarlo.
+
+#+begin_quote
+Recuerde que un buen sistema de software se compone de una serie de
+documentos que se leen fácilmente. Deben tener un estilo coherente y
+dinámico. El lector debe confiar en que los formatos que ve en nuestro
+archivo de código significarán lo mismo para otros. Lo último que queremos
+es aumentar la complejidad del código creando una mezcla de estilos
+diferentes.
+#+end_quote
+*** APERTURA VERTICAL ENTRE CONCEPTOS
 * Citas
 #+BEGIN_QUOTE
 - Las cosas pequeñas importan.
