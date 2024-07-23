@@ -1,0 +1,10 @@
+#+title: Laravel
+#+startup: showeverything
+
+* Laravel :toc:
+- [[#installation][Installation]]
+
+* Installation
+#+begin_src php
+composer global require laravel/installer
+#+end_src
