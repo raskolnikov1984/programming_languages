@@ -1,0 +1,137 @@
+#+title: Conectores y Articulos
+
+
+* Content :toc:
+- [[#connectors][Connectors]]
+  - [[#and---addition][And - Addition]]
+  - [[#but---contrast][But - Contrast]]
+  - [[#or---options][Or - Options]]
+- [[#the]["THE"]]
+  - [[#excersice][Excersice]]
+-  [[#weather-conditions-using-its][Weather conditions Using "it's"]]
+  - [[#examples][Examples]]
+  - [[#excersice-1][Excersice]]
+- [[#here-and-there]["Here" and "There"]]
+  - [[#here][Here]]
+  - [[#there][There]]
+- [[#how-often]["How often"]]
+- [[#adverbs-of-frequency][Adverbs of frequency]]
+
+* Connectors
+And/But/Or
+
+** And - Addition::
+- I like to drink coffe and tea
+- My sister watches series and movies.
+- Miranda bought a new swimsuit, sunglasses, and a hat.
+
+** But - Contrast::
+- I like to drink coffe, but not tea.
+- My sister watches series, but I watch movies.
+- Miranda bought a new swimsuit and sunglasses, but she didn't buy a hat.
+
+** Or - Options::
+- You can drink coffee or tea.
+- Does your sister watch series or movies.
+- Miranda needs to choose one: a new swimsuit or hat.
+
+* "THE"
+Refer to specific... people, things, situations
+- Only one, unique:
+  The Pope lives in Vatican city. The CEO of that company.
+- Particular person:
+  The teacher who works here.
+- Groups of people:
+  The Spanish make wine
+- Families:
+  My uncle lives next to the jacksons.
+- Musical instruments:
+  I can play the piano.
+- Only one in the place:
+  Where is the bathroom?
+- Particular place:
+  I live in the blue house across the street.
+- Famous monuments, buildings, museums, etc..
+  The Eiffel tower is in Paris.
+- Hotels, bars and restaurants (Not named after a person).
+  I'm staying at the Plaza.
+- Unique things:
+  I love looking at the sky.
+- Ordinal numbers:
+  It's the second time I call you.
+- Decades:
+  I was born in the 80's
+- Gegraphical areas, groups of rivers, mountain ranges, oceans, etc:
+  The cruise crossed the Atlantic
+- Countries (plural names / "republic" / "kingdom" / "states")
+  Erick is from the Philippines.
+
+** Excersice::
+Completa las siguientes oraciones. Decide si se debe usar el aticulo "the" o se debe dejar en blanco
+1. We can go anywhere in *the* world.
+2. Mark is *The* CEO of the company.
+3. I wish you could play *the* guitar for me.
+4. My little brother was born in *the* 90's.
+5. I'm going to have the dinner at Suzanna's.
+6. I traveled to Spain, *the* Netherlands, and *the* United Kingdom last year.
+7. My best friend works with *the* Kardashians.
+8. Every time I travel to New York, I visit *The* Empire State Building.
+9. The ship has to cross *The* Pacific Ocean to get there.
+10. President Obama was *the* 44th President of *The* United States.
+
+*  Weather conditions Using "it's"
+Impersonal subject
+- It's + condition
+- The weather is + condition
+
+** Examples::
+- It's sunny.
+- It's cloudy.
+- It's rainy.
+- It's windy.
+- It's hot.
+- It's cold.
+
+** Excersice::
+#+begin_verse
+I live in Colombia. Many people think Colombia is always hot, but it’s not like that. I live in the capital, Bogotá. It is located at an average altitude of 2,640 meters above sea level. Because of that, it’s normally very cold here, especially at night. For me, it’s a great city to live in, since I LOVE cold weather. It’s warm sometimes, but usually, it’s cloudy and rainy. There are other cities in Colombia where it’s sunny and hot, like Cartagena. Or warm and windy, like San Andrés. It’s great living here because you can find all kinds of weather.
+#+end_verse
+
+1. What's the weather like in Colombia?
+   R/. Depends on the city
+2. What's the weather like in Bogota?
+   R/. It's normally very cold.
+3. What's the weather like in Cartagena?
+   It's sunny and hot.
+
+* "Here" and "There"
+** Here
+Refers to the place where the speaker is.
+- The remote control is in here.
+- There aren't many apples here.
+- There is nobody here.
+** There
+Refers to the place where the listener is.
+- The remote control is in there.
+- There aren't many apples there.
+- There is nobody there.
+
+* "How often"
+Frequency, forming questions.
+
+How often + do/does + subject + verb
+
+Examples:
+
+- How often do you go to the gym?
+- How often does Sammy wash the dishes?
+- How often do your siblings visit you?
+- How often does she go to the park?
+
+* Adverbs of frequency
+
+| Always       | 100% |
+| Usually      |  90% |
+| Sometimes    |  50% |
+| Hardly Every |   5% |
+| Never        |   0% |

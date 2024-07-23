@@ -1,0 +1,23 @@
+#+title: At and After
+
+
+
+* Routines
+What is your day like?
+I wake up at 6:00 am, after I get up, I make my bed.
+I shower at 6:30 am, after I shower, I get ready.
+I walk my dog at 7 am, after I walk my dog, I have breakfast.
+finally, after I have breakfast, I start work
+
+* What time is it?
+- o' clock: en punto.
+- quarter past: Pasados 15 minutos.
+- half past: Pasados 30 minutos.
+- quarter to: Faltando 15 minutos.
+
+#+begin_example
+1. It's a quarter to five.
+2. It's five o'clock.
+3. It's half past one.
+4. It's a quarter to eight.
+#+end_example

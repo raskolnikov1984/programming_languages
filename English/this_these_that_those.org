@@ -1,0 +1,47 @@
+#+title: THIS THESE THAT THOSE
+#+author: Alejandro Ayala Usuga
+
+* Whatr are you wearing to the party?
+This -> To refer to something that is close to the speaker
+These -> To refer to some things that are close to the speaker
+
+#+begin_example
+This is my notebook
+This shoe is mine
+These toys are fun
+These shoes are mine
+#+end_example
+
+That -> To refer to something that is away from the speaker
+Those -> To refer to some things that are away from the speaker
+
+#+begin_example
+That laptop belongs to Robert
+
+Those plants are not real.
+Those drawings on the wall were inspired by nature.
+#+end_example
+
+Los demostrativos en Ingles son palabras que determinan la distancia o ubicacion a la que se encuentra un objeto dentro de una frase:
+
+Si el objeto en cuestion esta cerca:
+
+| This  | este, esta, esto |
+| These | estos, estas     |
+
+This wall is clean.
+That house is white.
+
+Si el objeto en cuestion es lejos:
+
+| That  | ese, esa, eso/ aquel, aquella, aquello |
+| Those | esos, esas / aquellos, aquellas       |
+
+Those cars are big
+These apples are red
+
+
+1. Complete the sentence with the correct linking verb:
+   a. The soup *tastes* delicious.
+   b. She *looks* comfortable.
+   c. Their style *is* casual.
