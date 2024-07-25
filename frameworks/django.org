@@ -10,6 +10,9 @@
   - [[#run-the-server][Run the server]]
   - [[#crea-applications][Crea applications]]
   - [[#steps][Steps]]
+- [[#desarrollo-web][Desarrollo Web]]
+  - [[#objetos-solicitud-y-respuesta][Objetos Solicitud y Respuesta]]
+  - [[#obtener-vistas-desde-templates-django][Obtener vistas desde Templates Django.]]
 
 * How Does Django Work?: MVT
 - Model
@@ -71,3 +74,78 @@ python3 manage.py startapp members
       Member.objects.all().values()
       #+end_src
    4. **Note** Remember run migrations
+
+* Desarrollo Web::
+Http, Protocol used by clients and web servers. It works to transfer web resources such as HTML files.
+
+**Method:** GET **Version** / HTTP/1.1
+**Path:** Host: developer.mozilla.org
+**Headers** Accept-Language: en
+
+
+Codigo de Errores.
+| Informational | 100-199 | Provisional\ Interim response\ 100 Continue                                                |
+| Successful    | 200-299 | Successfully Processed\200 Ok                                                              |
+| Redirection   | 300-399 | Moved\ 301 Moved Permanentyly \ 302 Found                                                  |
+| Client Error  | 400-499 | Client Error responses\ 400 Bad Request\ 401 Unauthorized \ 403 Forbidden \ 404 Not Found  |
+| Server Error  | 500-599 | Server Error \ 500 Internal Server Error                                                   |
+
+** Objetos Solicitud y Respuesta::
+Una aplicacion web funciona segun el principio de un ciclo de solicitud-respuesta en una arquitectura cliente-servidor, mediante el protocolo HTTP.
+
+*Django* maneja la solicitud y la respuesta con la ayuda de las clases *HttpRequest* y *HttpResponse* en el modulo django.http
+
+La lógica de vista utiliza este atributo para identificar cómo el cliente se ha acercado al servidor. Un navegador envía su solicitud mediante cualquier método HTTP o verbos:  POST, GET, DELETE, y PUT.
+
+Dentro de la función de vista, se pueden ejecutar diferentes bloques condicionales según el valor del atributo del método. Por ejemplo:
+
+#+begin_src python
+if request.method == 'GET':
+    do_something()
+elif request.method == 'POST':
+    do_something_else()
+#+end_src
+
+De acuerdo con el principio *REST* (Representational State Transfer)
+*** request.GET and request.POST
+Los atributos devuelven un objeto similar a un diccionario que contiene los parámetros GET y POST, respectivamente.
+*** request.COOKIES
+Junto con los parámetros, el navegador también empaqueta los objetos solicitud con cookies insertadas por interacciones previas del servidor. Es un diccionario de claves y valores de cadena.
+*** request.FILES
+Cuando el usuario carga uno o más archivos con un formulario de varias partes, están presentes en este atributo en forma de objetos UploadedFile (archivo cargado). Según la lógica apropiada en la vista, estos archivos cargados se guardan en la carpeta designada en el servidor.
+*** request.user
+El objeto solicitud también contiene información sobre el usuario actual. Este atributo es un objeto de la clase django.contrib.auth.models.User. Sin embargo, si el usuario no está autenticado, devuelve AnonymousUser. Dentro de la vista, puede establecer una lógica separada para cualquiera de ellos.
+
+#+begin_src python
+if request.user.is_authenticated():
+    # Do something for logged-in users.
+    pass
+else:
+    # Do something for anonymous users.
+#+end_src
+*** request.has_key()
+Este es un método disponible para el objeto solicitud. Ayuda a verificar si el diccionario de parámetros GET o POST cuenta con un valor para la clave dada.
+
+** Obtener vistas desde Templates Django.
+#+begin_src python
+from django.http import HttpResponse
+from django.template import loader
+
+def index(reques):
+    template = loader.get_template('demoapp/indes.html')
+    context={}
+    return HttpResponse(template.render(context, request))
+#+end_src
+
+#+begin_src python
+from django.http import HttpResponse
+def index(request):
+    path = request.path
+    method = request.method
+    content='''
+<center><h2>Testing Django Request Response Objects</h2>
+<p>Request path : " {}</p>
+<p>Request Method :{}</p></center>
+'''.format(path, method)
+    return HttpResponse(content) 
+#+end_src
