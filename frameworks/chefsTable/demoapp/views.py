@@ -1,9 +1,12 @@
-from django.shortcuts import render
+from django.template import loader
+# from django.shortcuts import render
 from django.http import HttpResponse
 
 
 def home(request):
-    return render(request, 'demoapp/home.html')
+    template = loader.get_template('demoapp/home.html')
+    context = {}
+    return HttpResponse(template.render(context, request))
 
 
 def index(request):

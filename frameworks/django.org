@@ -13,6 +13,7 @@
 - [[#desarrollo-web][Desarrollo Web]]
   - [[#objetos-solicitud-y-respuesta][Objetos Solicitud y Respuesta]]
   - [[#obtener-vistas-desde-templates-django][Obtener vistas desde Templates Django.]]
+  - [[#url][URL]]
 
 * How Does Django Work?: MVT
 - Model
@@ -148,4 +149,82 @@ def index(request):
 <p>Request Method :{}</p></center>
 '''.format(path, method)
     return HttpResponse(content) 
+#+end_src
+
+** URL
+SCHEME + SUBDOMAIN + DOMAIN + FILE PATH + PARAMETER
+
+*SCHEME*: HTTP | HTTPS
+*SUBDOMAIN*: WWW
+*DOMAIN*: SECOND LEVEL DOMAIN + TOP LEVEL DOMAIN
+*FILE PATH*: LOCATION OF A RESOURCE
+*PARAMETER*: STRUCTURE ADDITIONAL INFORMATION
+
+*** Parametros
+#+begin_src python url.py
+path('getuser/<name>/<id>', views.pathview, name='pathview')
+#+end_src
+
+#+begin_src python
+from django.http import HttpResponse
+def pathview(request, name, id):
+    return HttpResponse("Name: {} UserID:{}".format(name, id))
+#+end_src
+
+str - coincide con cualquier cadena que no esté vacía y excluye el separador de ruta '/'. TEste es el valor predeterminado si no se incluye un convertidor en la expresión.
+
+int - coincide con cero o cualquier entero positivo y devuelve un int. Por ejemplo:/customer/<int:id>
+
+slug - coincide con cualquier cadena de slug que consista en letras o números ASCII, incluidos los guiones y guiones bajos.
+
+uuid - coincide con un UUID formateado.  Por ejemplo: 075194d3-6885-417e-a8a8-6c931e272f00 y devuelve una instancia de UUID.
+
+path - coincide con cualquier cadena que no esté vacía e incluye el separador de ruta '/'.
+
+*** Parametros de consulta
+#+begin_src python url.py
+path('getuser/', views.qryview, name='qryview')
+#+end_src
+
+Declare la función  qryview en el archivo views.py.
+
+#+begin_src python
+from django.http import HttpResponse
+
+def qryview(request):
+    id = request.GET['id']
+    return HttpResponse("Name: {} UserID:{}".format(name, id))
+#+end_src
+
+*** Parametros del cuerpo
+Un formulario HTML envía los datos a la URL mencionada en su atributo de acción mediante el método POST. TEl método POST es una forma más segura de enviar datos que el método GET porque los datos no se revelan en la URL.
+
+Construyamos un formulario simple que contenga dos elementos de entrada de texto. Luego, guárdelo como form.html en la carpeta templates.
+
+#+begin_src html
+<form action="/myapp/getform/" method="POST">
+    {% csrf_token %}
+    <p>Name: <input type="text" name="id"></p>
+    <p>UserID :<input type="name" name="name"></p>
+    <input type="submit">
+</form>
+#+end_src
+
+#+begin_src python
+path("showform/", views.showform, name="showform"),
+path("getform/", views.getform, name='getform'),
+#+end_src
+
+#+begin_src python
+from django.http import HttpResponse
+from django.shortcuts import render
+
+def showform(request):
+    return render(request, "form.html")
+
+def getform(request):
+    if request.method == "POST":
+        id=request.POST['id']
+        name=request.POST['name']
+    return HttpResponse("Name:{} UserID:{}".format(name, id))
 #+end_src
