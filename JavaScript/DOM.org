@@ -1,0 +1,13 @@
+#+title: DOM
+
+* Content :toc:
+- [[#seleccionando-elementos][Seleccionando Elementos]]
+
+* Seleccionando Elementos::
+#+begin_src javascript
+document.getElementById("app-title")
+
+document.querySelector("#app-title")
+
+document.querySelector("p")
+#+end_src

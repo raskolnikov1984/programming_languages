@@ -14,6 +14,13 @@
   - [[#objetos-solicitud-y-respuesta][Objetos Solicitud y Respuesta]]
   - [[#obtener-vistas-desde-templates-django][Obtener vistas desde Templates Django.]]
   - [[#url][URL]]
+  -  [[#url-con-expresiones-regulares][URL con Expresiones regulares]]
+  - [[#espacio-de-nombres-de-la-aplicacion][Espacio de nombres de la aplicacion]]
+  - [[#manejo-de-errores-en-vistas][Manejo de Errores en Vistas]]
+  - [[#clases-de-excepicon][Clases de Excepicon]]
+  - [[#modelar-relaciones][Modelar Relaciones]]
+- [[#migraciones][Migraciones]]
+- [[#forms][Forms]]
 
 * How Does Django Work?: MVT
 - Model
@@ -228,3 +235,228 @@ def getform(request):
         name=request.POST['name']
     return HttpResponse("Name:{} UserID:{}".format(name, id))
 #+end_src
+
+**  URL con Expresiones regulares::
+#+begin_src python
+urlpatterns = [
+    re_path(r'^menu_item/[0-9]{2})/$', views.display_menu_item),
+]
+#+end_src
+
+#+begin_src python
+from django.urls import path, re_path
+from . import views
+
+urlpatterns = [
+    path('menu_item/10', views.display_menu_item),
+    re_path(r'^menu_item/[0-9]{2})/$', views.display_menu_item),
+]
+#+end_src
+
+Uso de la funcion reverse de Django
+
+#+begin_src python
+(venv) [raskolnikov@rodia frameworks]$ python3 chefsTable/manage.py shell
+Python 3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from django.urls import reverse
+>>> reverse('index')
+'/littlelemon/'
+>>>
+#+end_src
+
+** Espacio de nombres de la aplicacion::
+El espacio de nombres de la aplicacion se crea mediante la variable app_name en el archivo urls.py de la
+aplicacion y asignandole el nombre de la aplicacion. En el script demoapp/urls.py realice el cambio mediante
+el siguiente codigo:
+
+#+begin_src python
+#demoapp/urls.py
+from django.urls import path
+from . import views
+app_name='demoapp'
+urlpatterns = [
+    path('', views.index, name='index'),
+] 
+#+end_src
+
+Para obtener la ruta URL de la función index() (índice), llame a la función reverse() (inversa) anteponiéndole el espacio de nombres.
+#+begin_src python
+(venv) [raskolnikov@rodia frameworks]$ python3 chefsTable/manage.py shell
+Python 3.11.5 (main, Sep 11 2023, 13:54:46) [GCC 11.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from django.urls import reverse
+>>> reverse('demoapp:index')
+'/littlelemon/'
+>>>
+#+end_src
+
+*Espacio de nombres de instancia*
+#+begin_src python
+#in demoproject/urls.py
+urlpatterns=[
+    # ...
+    path('demo/', include('demoapp.urls', namespace='demoapp')),
+    # ...
+]
+#+end_src
+
+*Uso del espacio de nombres en la vista*
+#+begin_src python
+from django.http import HttpResponsePermanentRedirect
+from django.urls import reverse
+
+def myview(request):
+    ....
+    return HttpResponsePermanentRedirect(reverse('demoapp:login'))
+#+end_src
+
+*Espacio de nombres en la etiqueta de url*
+Se envía un formulario HTML a la URL especificada en el atributo de acción.
+
+#+begin_src html
+<form action="/demoapp/login" method="post">
+
+#form attributes
+
+<input type='submit'>
+
+</form> 
+#+end_src
+
+** Manejo de Errores en Vistas::
+En una aplicación Django, una función de vista es donde se realiza todo el procesamiento. Recibe la solicitud y formula la respuesta.
+Django tiene una clase genérica HttpResponseNotFound. Puede devolver su objeto para transmitir el mensaje apropiado.
+
+#+begin_src python
+from django.http import HttpResponse, HttpResponseNotFound
+
+def my_view(request):
+    # ...
+    if condition:
+        return HttpResponseNotFound('<h1>Page not found</h1>')
+    else:
+        return HttpResponse('<h1>Page was found</h1>')
+#+end_src
+
+#+begin_src python
+from django.http import HttpResponse
+def my_view(request):
+    # ...
+    if condition==True:
+        return HttpResponse('<h1>Page not found</h1>', status_code='404')
+    else:
+        return HttpResponse('<h1>Page was found</h1>')
+#+end_src
+
+#+begin_src python
+from django.http import Http404, HttpResponse
+from .models import Product
+
+def detail(request, id):
+    try:
+        p = Product.objects.get(pk=id)
+    except Product.DoesNotExist:
+        raise Http404("Product does not exist")
+    return HttpResponse("Product Found")
+#+end_src
+
+** Clases de Excepicon
+Las clases de excepción de Django se definen en el módulo *django.core.exceptions*.
+
+Some important exception types are:
+Algunos tipos de excepciones importantes son:
+    *ObjectDoesNotExist* (el objeto no existe): todas las excepciones de DoesNotExist (No existe) se heredan de esta excepción base.
+    *EmptyResultSet* (Conjunto de resultados vacío): esta excepción se genera si una consulta no devuelve ningún resultado.
+    *FieldDoesNotExist* (No existe el campo): esta excepción se genera cuando el campo solicitado no existe.
+    *MultipleObjectsReturned* (Varios objetos devueltos): cuando espera que una determinada consulta devuelva solo un objeto, sin embargo, se devuelven varios objetos. Aquí es cuando necesita generar esta excepción.
+    *PermissionDenied* (Permiso denegado): esta excepción se genera cuando un usuario no tiene permiso para realizar la acción solicitada.
+
+** Modelar Relaciones::
+*Primary Key*
+En una base de datos relacional, cada tabla que representa una entidad tiene una columna que tiene un valor único para cada fila. Tal columna o campo se conoce como la clave principal.
+
+Si la clave principal de una tabla aparece como uno de los campos de otra tabla y tiene su propia clave principal, se denomina clave externa.
+
+*** Tipos de Relaciones
+*One2One*
+Si una clave principal está en un modelo y solo existe un registro en el otro modelo relacionado, se dice que los dos modelos tienen una relación de uno a uno.
+
+#+begin_src python
+class college(Model):
+    CollegeID = models.IntegerField(primary_key = True)
+    name = models.CharField(max_length=50)
+    strength = models.IntegerField()
+    website=models.URLField()
+#+end_src
+
+#+begin_src python
+class Principal(models.Model):
+    CollegeID = models.OneToOneField(
+                College,
+                on_delete=models.CASCADE
+                )
+    Qualification = models.CharField(max_length=50)
+    email = models.EmailField(max_length=50)
+#+end_src
+
+*One2Many*
+En una relación de uno a varios, un objeto de un modelo se puede asociar con uno o más objetos de otro modelo. Por ejemplo, un profesor está calificado para enseñar una materia, pero puede haber más de un profesor en una universidad que enseñe la misma materia.
+
+#+begin_src python
+class Subject(models.Model):
+    Subjectcode = models.IntegerField(primary_key = True)
+    name = models.CharField(max_length=30)
+    credits = model.IntegerField()
+#+end_src
+
+El modelo de profesor tiene su propia clave principal. Tiene una Foreignkey (Clave foránea)  que relaciona este modelo con el modelo sujeto.
+
+#+begin_src python
+class Teacher(models.Model):
+    TeacherID = models.ItegerField(primary_key=True)
+    subjectcode=models.ForeignKey(
+                Subject,
+                on_delete=models.CASCADE
+                  )
+    Qualification = models.CharField(max_length=50)
+    email = models.EmailField(max_length=50)
+#+end_src
+
+*Many2Many*
+En una relación de muchos a muchos, varios objetos de un modelo se pueden asociar con varios objetos de otro modelo.
+
+Redefinamos la relación entre el sujeto y los modelos del profesor en el ejemplo anterior. Si más de un profesor puede enseñar la misma materia, un solo profesor puede enseñar más de una materia. Entonces, hay una relación muchos a muchos entre los dos
+
+#+begin_src python
+class Teacher(models.Model):
+    TeacherID = models.ItegerField(primary_key=True)
+    Qualification = models.CharField(max_length=50)
+    email = models.EmailField(max_length=50)
+
+class Subject(models.Model):
+    Subjectcode = models.IntegerField(primary_key = True)
+    name = models.CharField(max_length=30)
+    credits = model.IntegerField()
+    teacher = model.ManyToManyField(Teacher)
+#+end_src
+
+*ondelete*
+
+*CASCADE (CASCADA):* elimina el objeto que contiene la ForeignKey (clave foránea)
+
+*PROTECT (PROTEGER):* evita la eliminación del objeto al que se hace referencia.
+
+*RESTRICT (RESTRINGIR):* evite la eliminación del objeto al que se hace referencia y genera un RestrictedError(Error restringido)
+
+* Migraciones::
+El sistema de migración de Django cuenta con los siguientes comandos:
+
+- makemigrations
+- migrate
+- sqlmigrate
+- showmigrations
+
+* Forms::

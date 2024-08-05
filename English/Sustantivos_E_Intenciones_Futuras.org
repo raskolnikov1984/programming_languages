@@ -1,0 +1,41 @@
+#+title: Sustantivos E Intenciones Futuras
+
+
+* Content :toc:
+- [[#how-to-make-questions-with-what--which][How to make questions with "What" & "Which"]]
+- [[#how-to-make-questions-with-whose][How to make questions with "whose"?]]
+  - [[#answer-whose-questions][Answer "Whose" Questions]]
+
+* How to make questions with "What" & "Which"
+- Which ::
+  Use Which when you are asking someone to make a specific choice from a set of options
+
+  - Which computer is yours, the Macbook or the HP?
+  - Which room is Paul currently working in?
+  - There are five programs. Which program are they joining?
+
+- What ::
+  Use What when there are many options available to choose from.
+
+  - What university did you attend?
+  - What tools do you use at work?
+  - What app do you recommend us to download?
+
+- Practice Time ::
+  1. *What* plans do you have available?
+
+  2. *Which* additional service would you like to include, Telephone or TV services?
+
+  3. *What* city are you located in?
+
+* How to make questions with "whose"?
+use whose when you are asking who the owner of an objects is.
+
+- Whose ID card is this?
+- Whose office is it?
+- Whose birthday are we celebrating this month?
+
+** Answer "Whose" Questions
+- Possesive 's: It is Amy's.
+- Possesive Pronoun: It is his.
+- Possesive Adjective: Those are my headphones.
