@@ -21,6 +21,8 @@
   - [[#modelar-relaciones][Modelar Relaciones]]
 - [[#migraciones][Migraciones]]
 - [[#forms][Forms]]
+  - [[#fields][Fields]]
+  - [[#arguments][Arguments]]
 
 * How Does Django Work?: MVT
 - Model
@@ -460,3 +462,15 @@ El sistema de migración de Django cuenta con los siguientes comandos:
 - showmigrations
 
 * Forms::
+** Fields ::
+1. CharField
+2. EmailField
+3. IntegerField
+4. MultipleChocieField
+5. FileField
+
+** Arguments ::
+- required
+- label
+- initial
+- help_text
