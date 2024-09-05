@@ -28,6 +28,16 @@
   - [[#la-función-del-formato][La función del formato]]
   - [[#la-metafora-del-periódico][La metafora del periódico]]
 - [[#citas][Citas]]
+- [[#capitulo-7-procesar-errores][Capitulo 7: Procesar Errores]]
+  - [[#try-catch-finally][Try-Catch-Finally:]]
+  - [[#control-de-errores][Control de Errores]]
+  - [[#usar-exceptionces-en-lugar-codigos-devueltos][Usar Exceptionces en lugar codigos devueltos:]]
+  - [[#crear-primero-la-instrucción-try-catch-finally][Crear Primero la instrucción try-catch-finally:]]
+  - [[#usar-excepciones-sin-comprobar][Usar Excepciones sin comprobar:]]
+  - [[#ofrecer-contexto-junto-a-las-excepciones][Ofrecer contexto junto a las excepciones:]]
+  - [[#no-devolver-null][NO Devolver NuLL]]
+  - [[#no-pasar-null][NO pasar NULL]]
+  - [[#conclusion][Conclusion:]]
 
 * Prologo
 En medio de la situación y el contexto actual en el que vivimos los afánes por la producción inmediata
@@ -452,3 +462,89 @@ diferentes.
 #+END_QUOTE
 
 *Ley de LeBlanc: Después es igual a nunca.*
+
+* Capitulo 7: Procesar Errores
+** Try-Catch-Finally:
+El bloque try-catch-finally en la programación se utiliza para manejar excepciones, es decir, errores que ocurren durante la ejecución del código. Cada parte de este bloque tiene una finalidad específica:
+
+1. try: En esta sección colocas el código que puede causar una excepción. Es el bloque donde intentas ejecutar operaciones que podrían fallar. Si ocurre una excepción en este bloque, el flujo de ejecución se interrumpe y se pasa al bloque catch.
+
+2. catch: Aquí es donde manejas las excepciones que se producen en el bloque try. Puedes capturar excepciones específicas (o una clase general de excepciones) y proporcionar una respuesta o manejar el error de manera apropiada. El bloque catch te permite definir cómo reaccionar ante diferentes tipos de errores.
+
+3. finally: Este bloque es opcional y se ejecuta siempre, independientemente de si ocurrió una excepción o no. Se utiliza para realizar tareas de limpieza o liberación de recursos, como cerrar archivos, liberar conexiones de bases de datos, o cualquier otra tarea que deba hacerse sin importar si el código en el bloque try fue exitoso o no.
+
+#+begin_src python
+try:
+    # Código que puede lanzar una excepción
+    result = int("no es un número")  # Esto lanzará una excepción ValueError
+except ZeroDivisionError:
+    # Maneja ZeroDivisionError
+    print("Se produjo una división por cero.")
+except ValueError:
+    # Maneja ValueError
+    print("Valor incorrecto para conversión.")
+except Exception as e:
+    # Maneja cualquier otra excepción
+    print(f"Ocurrió un error: {e}")
+finally:
+    # Código que se ejecuta siempre
+    print("Bloque finally ejecutado.")
+#+end_src
+** Control de Errores
+El control de errores es importante, pero si oscurece la logica, es incorrecto.
+
+** Usar Exceptionces en lugar codigos devueltos:
+Separar la logica y la implementacion de Error.
+
+#+begin_src java
+public class DeviceController {
+    …
+    public void sendShutDown() {
+            try {
+                tryToShutDown();
+            } catch (DeviceShutDownError e) {
+                logger.log(e);
+            }
+        }
+    private void tryToShutDown() throws DeviceShutDownError {
+        DeviceHandle handle = getHandle(DEV1);
+        DeviceRecord record = retrieveDeviceRecord(handle);
+        pauseDevice(handle);
+        clearDeviceWorkQueue(handle);
+        closeDevice(handle);
+    }
+
+    private DeviceHandle getHandle(DeviceID id) {
+        …
+        throw new DeviceShutDownError(“Invalid handle for: ” - id.toString());
+        …
+}
+    …
+}
+#+end_src
+
++ el algoritmo para apagar el dispositivo y el control de errores ahora se encuentran separados.
+Puede ver cada uno de ellos y entenderlos de forma independiente.
+
+** Crear Primero la instrucción try-catch-finally:
+Intente crear pruebas que fuercen las excepciones, para después añadir al
+controlador un comportamiento que satisfaga dichas pruebas. De este modo
+primero creará el ámbito de transacción del bloque try y podrá mantener la
+naturaleza de transacción del ámbito.
+
+** Usar Excepciones sin comprobar:
+Las excepciones comprobadas pueden ser útiles si tiene que crear una
+biblioteca crítica: tendrá que capturarlas. Pero en el desarrollo de aplicaciones
+generales, los costes de dependencia superan las ventajas.
+
+** Ofrecer contexto junto a las excepciones:
+Redacte mensajes de error informativos y páselos junto a sus excepciones. Mencione la operación fallida y el tipo de fallo. Si guarda registros en su aplicación, incluya información suficiente para poder registrar
+el error en la cláusula catch.
+
+** NO Devolver NuLL
+** NO pasar NULL
+
+** Conclusion:
+El código limpio es legible pero también debe ser robusto. No son objetivos
+opuestos. Podemos crear código limpio y robusto si consideramos el control
+de errores una preocupación diferente, algo que vemos de forma independiente desde nuestra lógica principal. Si somos capaces de lograrlo, razonaremos de forma independiente y podemos aumentar la capacidad de mantenimiento de nuestro código.
