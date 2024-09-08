@@ -20,11 +20,11 @@
                  };
              },
              methods: {
-                 increment(){
-                     this.counter++;
+                 submit(e){
+                     console.log(e)
                  }
              },
-             template: `<button v-on:click="increment">{{ counter }}</button>`
+             template: `<form><button v-on:submit="submit">{{ counter }}</button></form>`
          }).mount("#app")
          console.log(vm);
         </script>
