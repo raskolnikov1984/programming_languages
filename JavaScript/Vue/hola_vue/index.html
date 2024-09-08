@@ -16,10 +16,11 @@
          const vm = Vue.createApp({
              data(){
                  return {
+                     attr: "src",
                      img: "https://cdn.britannica.com/34/235834-050-C5843610/two-different-breeds-of-cats-side-by-side-outdoors-in-the-garden.jpg"
                  };
              },
-             template: `<img v-bind:src="img" v-bind:alt="img"/>`
+             template: `<img v-bind:[attr]="img" v-bind:[attr]="img"/>`
          }).mount("#app")
          console.log(vm);
         </script>
