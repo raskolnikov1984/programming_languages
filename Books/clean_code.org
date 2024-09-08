@@ -38,6 +38,11 @@
   - [[#no-devolver-null][NO Devolver NuLL]]
   - [[#no-pasar-null][NO pasar NULL]]
   - [[#conclusion][Conclusion:]]
+-  [[#capitulo-8-limites][Capitulo 8: Limites]]
+  - [[#utilizar-codigo-de-terceros][Utilizar Codigo de terceros]]
+  - [[#explorar-y-aprender-limites][Explorar y aprender limites]]
+  - [[#las-pruebas-de-aprendizaje-son-algo-mas-que-gratuitas][Las pruebas de aprendizaje son algo mas que gratuitas]]
+  - [[#limites-limpios][Limites Limpios]]
 
 * Prologo
 En medio de la situación y el contexto actual en el que vivimos los afánes por la producción inmediata
@@ -548,3 +553,40 @@ el error en la cláusula catch.
 El código limpio es legible pero también debe ser robusto. No son objetivos
 opuestos. Podemos crear código limpio y robusto si consideramos el control
 de errores una preocupación diferente, algo que vemos de forma independiente desde nuestra lógica principal. Si somos capaces de lograrlo, razonaremos de forma independiente y podemos aumentar la capacidad de mantenimiento de nuestro código.
+
+*  Capitulo 8: Limites
+Frente a la vinculacion de software mantenido por terceros.
+
+** Utilizar Codigo de terceros
+Librerias que ofrecen prestaciones mas de las que necesitamos o deseamos.
+Si usa una interfaz de límite como Map, manténgala dentro de la clase o la familia de
+clases en la que se use. Evite devolverla o aceptarla como argumento de API
+públicas. (Encapsular el comportamiento de librerias de terceros)
+
+** Explorar y aprender limites
+Pruebas de aprendizaje. En las pruebas de aprendizaje, invocamos la API de terceros como
+supuestamente la usaríamos en nuestra aplicación. Básicamente realizamos
+experimentos controlados para comprobar si la entendemos. Las pruebas se
+centran en lo que queremos obtener de la API. (Realizar pruebas de Funcionamiento y comprension y luego
+limitar y encapsular su comportamiento)
+
+** Las pruebas de aprendizaje son algo mas que gratuitas
+Las pruebas no sólo son gratuitas, sino también rentables. Cuando
+aparezcan nuevas versiones del paquete de terceros, ejecutamos las pruebas
+de aprendizaje para comprobar si hay diferencias de comportamiento.
+
+** Limites Limpios
+En los límites suceden cosas interesantes. Los cambios es una de ellas. Los
+diseños de código correctos acomodan los cambios sin necesidad de grandes
+modificaciones. Cuando usamos código que no controlamos, hay que prestar
+especial atención a proteger nuestra inversión y asegurarnos de que los
+cambios futuros no son demasiado costosos. El código en los límites requiere
+una separación evidente y pruebas que definan expectativas. Debemos evitar
+que el código conozca los detalles de terceros. Es más aconsejable depender
+de algo que controlemos que de algo que no controlemos, y menos todavía si
+nos controla. Los límites de terceros se gestionan gracias a la presencia de
+puntos mínimos en el código que hagan referencia a los mismos. Podemos
+envolverlos como hicimos con Map o usar un adaptador para convertir nuestra
+interfaz perfecta en la interfaz proporcionada. En cualquier caso, el código se
+lee mejor, promueve el uso coherente e interno en el límite y hay menos
+puntos de mantenimiento cuando cambie el código de terceros.
