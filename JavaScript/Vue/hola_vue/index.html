@@ -20,8 +20,8 @@
                  };
              },
              methods: {
-                 submit(e){
-                     console.log(e)
+                 submit(){
+                     this.counter++;
                  }
              },
              template: `<form><button v-on:submit="submit">{{ counter }}</button></form>`
