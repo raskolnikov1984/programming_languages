@@ -16,11 +16,15 @@
          const vm = Vue.createApp({
              data(){
                  return {
-                     attr: "src",
-                     img: "https://cdn.britannica.com/34/235834-050-C5843610/two-different-breeds-of-cats-side-by-side-outdoors-in-the-garden.jpg"
+                     counter: 0
                  };
              },
-             template: `<img v-bind:[attr]="img" v-bind:[attr]="img"/>`
+             methods: {
+                 increment(){
+                     console.log("click!");
+                 }
+             },
+             template: `<button v-on:click="increment">{{ counter }}</button>`
          }).mount("#app")
          console.log(vm);
         </script>
