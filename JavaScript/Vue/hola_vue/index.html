@@ -19,7 +19,7 @@
                      text: "Hola Vue"
                  };
              },
-             template: `<div v-text="text"></div>`
+             template: `<div v-once v-text="text"></div>`
          }).mount("#app")
          console.log(vm);
         </script>
