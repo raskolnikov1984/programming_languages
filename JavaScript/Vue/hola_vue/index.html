@@ -16,10 +16,10 @@
          const vm = Vue.createApp({
              data(){
                  return {
-                     text: "<p>Hola Vue</p>"
+                     img: "https://cdn.britannica.com/34/235834-050-C5843610/two-different-breeds-of-cats-side-by-side-outdoors-in-the-garden.jpg"
                  };
              },
-             template: `<div v-once v-html="text"></div>`
+             template: `<img v-bind:src="img" v-bind:alt="img"/>`
          }).mount("#app")
          console.log(vm);
         </script>
