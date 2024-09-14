@@ -1,0 +1,32 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Untitled</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+    </head>
+    <body>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <div id="app">
+            <h1>{{ message }}</h1>
+            <p>Count Is: {{ counter.count  }}</p>
+        </div>
+        <script type="module">
+            Vue.createApp({
+                data(){
+                    return {
+                        message: 'Hello World!',
+                        counter: {
+                            count: 0
+                        }
+                    }
+                }
+            }).mount('#app')
+        </script>
+    </body>
+</html>

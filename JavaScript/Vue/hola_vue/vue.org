@@ -1,0 +1,151 @@
+#+title: Vue
+
+
+* Content :toc:
+- [[#introduction][Introduction]]
+  - [[#single-file-components][Single-File Components]]
+- [[#attribute-bindings][Attribute Bindings]]
+  - [[#v-bind][v-bind]]
+- [[#even-listeners][Even Listeners]]
+- [[#form-bindings][Form Bindings]]
+
+* Introduction
+ It's a framework that can grow with you and adapt to your needs.
+
+** Single-File Components
+
+In most build-tool-enabled Vue projects, we author Vue components using an HTML-like file format called Single-File Component (also known as *.vue files, abbreviated as SFC). A Vue SFC, as the name suggests, encapsulates the component's logic (JavaScript), template (HTML), and styles (CSS) in a single file. Here's the previous example, written in SFC format:
+
+#+begin_src vue
+<script setup>
+import { ref } from 'vue'
+const count = ref(0)
+</script>
+
+<template>
+  <button @click="count++">Count is: {{ count }}</button>
+</template>
+
+<style scoped>
+button {
+  font-weight: bold;
+}
+</style>
+#+end_src
+
+* Attribute Bindings
+** v-bind
+
+ChatGPT
+
+En Vue.js, la directiva v-bind se utiliza para enlazar dinámicamente atributos o propiedades de HTML a las propiedades reactivas del componente Vue. Esto permite que los valores de los atributos cambien automáticamente cuando el estado del componente cambia.
+
+#+begin_src html
+<div v-bind:id="dynamicId"></div>
+#+end_src
+
+#+begin_src html
+<!-- bind an attribute -->
+<img v-bind:src="imageSrc" />
+
+<!-- dynamic attribute name -->
+<button v-bind:[key]="value"></button>
+
+<!-- shorthand -->
+<img :src="imageSrc" />
+
+<!-- same-name shorthand (3.4+), expands to :src="src" -->
+<img :src />
+
+<!-- shorthand dynamic attribute name -->
+<button :[key]="value"></button>
+
+<!-- with inline string concatenation -->
+<img :src="'/path/to/images/' + fileName" />
+
+<!-- class binding -->
+<div :class="{ red: isRed }"></div>
+<div :class="[classA, classB]"></div>
+<div :class="[classA, { classB: isB, classC: isC }]"></div>
+
+<!-- style binding -->
+<div :style="{ fontSize: size + 'px' }"></div>
+<div :style="[styleObjectA, styleObjectB]"></div>
+
+<!-- binding an object of attributes -->
+<div v-bind="{ id: someProp, 'other-attr': otherProp }"></div>
+
+<!-- prop binding. "prop" must be declared in the child component. -->
+<MyComponent :prop="someThing" />
+
+<!-- pass down parent props in common with a child component -->
+<MyComponent v-bind="$props" />
+
+<!-- XLink -->
+<svg><a :xlink:special="foo"></a></svg>
+#+end_src
+
+#+begin_src html
+<div id="app">
+  <p>The browser finds the 'src' attribute value from the Vue instance with the use of 'v-bind'.</p>
+  <img v-bind:src="url">
+</div>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+  const app = Vue.createApp({
+   data() {
+    return {
+      url: "img_beach3.jpg"
+    }
+   }
+  })
+  app.mount('#app')
+</script>
+#+end_src
+
+* Even Listeners
+We can listen to DOM events using the v-on directive:
+
+#+begin_src html
+<button v-on:click="increment">{{ count }}</button>
+#+end_src
+
+Due to its frequent use, v-on also has a shorthand syntax:
+
+#+begin_src html
+<button @click="increment">{{ count }}</button>
+#+end_src
+
+#+begin_src javascript
+import { createApp} from 'vue'
+createApp({
+  data() {
+    return {
+      count: 0
+    }
+  },
+  methods: {
+    increment() {
+      // update component state
+      this.count++
+    }
+  }
+})
+#+end_src
+
+* Form Bindings
+Using v-bind and v-on together, we can create two-way bindings on form input elements:
+
+#+begin_src html
+<input :value="text" @input="onInput">
+#+end_src
+
+#+begin_src javascript
+methods: {
+  onInput(e) {
+    // a v-on handler receives the native DOM event
+    // as the argument.
+    this.text = e.target.value
+  }
+}
+#+end_src
