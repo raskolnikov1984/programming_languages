@@ -17,7 +17,7 @@
       </Resume>
     </template>
     <template #movements>
-      <Movements></Movements>
+      <Movements :movements="movements"></Movements>
     </template>
   </Layout>
 </template>
@@ -26,7 +26,7 @@
  import Layout from "./LayoutForm.vue";
  import Header from "./HeaderForm.vue";
  import Resume from "./Resume/IndexForm.vue";
- import Movements from "./MovementsForm.vue";
+ import Movements from "./Movements/IndexForm.vue";
 
  export default {
    name: 'HomeForm',
@@ -40,6 +40,12 @@
          return {
              amount: null,
              label: null,
+             movements: [
+                 {id: 0, title: "Movimiento1",
+                  description: "Description", amount: 1000},
+                 {id: 1, title: "Movimiento2", description: "Description", amount: 2000},
+                 {id: 2, title: "Movimiento3", description: "Description", amount: 3000}
+             ]
          }
      },
  }
