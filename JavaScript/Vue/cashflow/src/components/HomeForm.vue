@@ -44,7 +44,7 @@
                  {id: 0, title: "Movimiento1",
                   description: "Description", amount: 1000},
                  {id: 1, title: "Movimiento2", description: "Description", amount: 2000},
-                 {id: 2, title: "Movimiento3", description: "Description", amount: 3000}
+                 {id: 2, title: "Movimiento3", description: "Description", amount: -3000}
              ]
          }
      },
