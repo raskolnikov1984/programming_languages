@@ -12,7 +12,7 @@
               graphic
           </template>
           <template #action>
-              action
+              <Action></Action>
           </template>
       </Resume>
     </template>
@@ -26,15 +26,17 @@
  import Layout from "./LayoutForm.vue";
  import Header from "./HeaderForm.vue";
  import Resume from "./Resume/IndexForm.vue";
+ import Action from "./ActionModal.vue";
  import Movements from "./Movements/IndexForm.vue";
 
  export default {
    name: 'HomeForm',
    components: {
-     Layout,
-     Header,
-     Resume,
-     Movements
+       Layout,
+       Header,
+       Resume,
+       Action,
+       Movements,
    },
      data(){
          return {
