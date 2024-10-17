@@ -35,3 +35,9 @@ def test_add_movie():
 
     response = client.post('/movies', json=new_movie)
     assert response.status_code == 201
+    assert client.get("/movies/6").status_code == 200
+
+def test_delete_movie():
+    response = client.delete('/movies/6')
+    assert response.status_code == 200
+    assert client.get("/movies/6").content.decode() == "Movie not found"

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import unittest
-from ..main import load_json, add_element_json
+from ..main import load_json, add_element_json, del_element_json
 
 
 class TestData(unittest.TestCase):
@@ -28,7 +28,13 @@ class TestData(unittest.TestCase):
 
         self.assertGreater(len(update_elements), len(current_elements))
 
-
+    def test_del_element_json(self):
+        file_path = './data/example.json'
+        element = 6
+        current_elements = load_json(file_path)
+        del_element_json(file_path, element)
+        update_elements = load_json(file_path)
+        self.assertLess(len(update_elements), len(current_elements))
 
 
 if __name__ == '__main__':

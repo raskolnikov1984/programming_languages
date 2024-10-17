@@ -18,6 +18,15 @@ def add_element_json(file_path, new_element):
         elements.append(new_element)
         json.dump(elements, filejson, indent=4)
 
+def del_element_json(file_path, element_id):
+    elements = load_json(file_path)
+    keep_elements = [
+        element for element in elements if element.get('id') != element_id]
+
+    with open(file_path, 'w') as filejson:
+        json.dump(keep_elements, filejson, indent=4)
+
+
 _movies = 'data/movies.json'
 
 @app.get("/")
@@ -41,3 +50,7 @@ async def create_movie(movie: dict):
         return load_json(_movies)
     except ValueError as error:
         raise Exception(error)
+
+@app.delete("/movies/{movie_id:int}", status_code=200)
+async def delete_movie(movie_id: int):
+    del_element_json(_movies, movie_id)
