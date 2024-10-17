@@ -53,4 +53,7 @@ async def create_movie(movie: dict):
 
 @app.delete("/movies/{movie_id:int}", status_code=200)
 async def delete_movie(movie_id: int):
-    del_element_json(_movies, movie_id)
+    try:
+        del_element_json(_movies, movie_id)
+    except ValueError as error:
+        raise Exception(error)
