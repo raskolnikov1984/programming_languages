@@ -7,7 +7,7 @@
       <Resume :label="label"
               :total-label="'Ahorro Total'"
               :amount="amount"
-              :total-amount="100000">
+              :total-amount="1000000">
           <template #graphic>
               <Graphic :amounts="amounts"/>
           </template>
@@ -44,7 +44,7 @@
          return {
              amount: null,
              label: null,
-             amounts: [100, 200, 500, 200, -400, -600, -300, 0, 500],
+             amounts: [100, 200, 500, 200, -400, -600, -300, 0, 300, 500],
              movements: [
                  {id: 0, title: "Movimiento1",
                   description: "Description", amount: 1000},
