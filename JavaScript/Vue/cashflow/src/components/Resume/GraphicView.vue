@@ -14,8 +14,14 @@
                 fill="none"
                 stroke="#0689B0"
                 stroke-width="2"
-                points="0,0 100,100 200,100 300,200"
-            />
+                points="0,0 100,100 200,100 300,200"/>
+            <line
+                stroke="#04b500"
+                stroke-width="2"
+                x1="200"
+                y1="0"
+                x2="200"
+                y2="200"/>
         </svg>
         <p>Últimos 30 días</p>
     </div>
