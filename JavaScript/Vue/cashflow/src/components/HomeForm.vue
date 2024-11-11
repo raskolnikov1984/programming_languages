@@ -9,7 +9,7 @@
               :amount="amount"
               :total-amount="100000">
           <template #graphic>
-              <Graphic/>
+              <Graphic :amounts="amounts"/>
           </template>
           <template #action>
               <Action></Action>
@@ -44,6 +44,7 @@
          return {
              amount: null,
              label: null,
+             amounts: [100, 200, 500, 200, -400, -600, -300, 0, 500],
              movements: [
                  {id: 0, title: "Movimiento1",
                   description: "Description", amount: 1000},
