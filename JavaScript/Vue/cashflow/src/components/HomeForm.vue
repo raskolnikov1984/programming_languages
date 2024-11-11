@@ -9,7 +9,7 @@
               :amount="amount"
               :total-amount="100000">
           <template #graphic>
-              graphic
+              <Graphic/>
           </template>
           <template #action>
               <Action></Action>
@@ -28,6 +28,7 @@
  import Resume from "./Resume/IndexForm.vue";
  import Action from "./ActionModal.vue";
  import Movements from "./Movements/IndexForm.vue";
+ import Graphic from "./Resume/GraphicView.vue";
 
  export default {
    name: 'HomeForm',
@@ -37,6 +38,7 @@
        Resume,
        Action,
        Movements,
+       Graphic
    },
      data(){
          return {
