@@ -34,7 +34,7 @@
 </template>
 
 <script setup>
- import { ref } from "vue";
+ import { ref, defineEmits } from "vue";
  import Modal from "./ModalView.vue";
 
  const showModal = ref(false);
@@ -43,7 +43,23 @@
  const description = ref("");
  const movementType = ref("Ingreso");
 
+ const emit = defineEmits(["create"]);
+
  const submit = () => {
+     emit("create", {
+         title: title.value,
+         description: description.value,
+         amount: movementType.value === "Ingreso" ? amount.value : -amount.value,
+         time: new Date(),
+         id: 11
+     });
+
+    // Reiniciar los campos del formulario
+    title.value = "";
+    amount.value = 0;
+    description.value = "";
+    movementType.value = "Ingreso"; // O el valor que desees como predeterminado
+
      showModal.value = !showModal.value;
  }
 </script>

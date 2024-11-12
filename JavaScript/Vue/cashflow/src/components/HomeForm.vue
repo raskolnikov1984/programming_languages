@@ -12,12 +12,15 @@
               <Graphic :amounts="amounts"/>
           </template>
           <template #action>
-              <Action></Action>
+              <Action @create="create"/>
           </template>
       </Resume>
     </template>
     <template #movements>
-      <Movements :movements="movements"></Movements>
+      <Movements
+        :movements="movements"
+        @remove="remove"
+        />
     </template>
   </Layout>
 </template>
@@ -160,6 +163,15 @@
              });
          },
      },
+     methods: {
+         create(movement){
+             this.movements.push(movement);
+         },
+         remove(id){
+             const index = this.movements.findIndex(m => m.id === id);
+             this.movements.splice(index, 1);
+         }
+     }
  }
 
 </script>
