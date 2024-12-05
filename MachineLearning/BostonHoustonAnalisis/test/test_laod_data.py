@@ -1,5 +1,4 @@
 import unittest
-from typing import Callable
 from data import KaggleHubLoadData
 import pandas as pd
 
